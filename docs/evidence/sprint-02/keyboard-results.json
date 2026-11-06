@@ -1,0 +1,35 @@
+{
+  "skipFocus": {
+    "label": "Skip to content",
+    "outline": "solid",
+    "outlineColor": "rgb(245, 242, 233)"
+  },
+  "skipTarget": "main",
+  "traversal": [
+    {
+      "href": "#main",
+      "name": "Skip to content",
+      "outline": "solid"
+    },
+    {
+      "href": "/",
+      "name": "Portfolio.",
+      "outline": "solid"
+    },
+    {
+      "href": "#work",
+      "name": "Work",
+      "outline": "solid"
+    },
+    {
+      "href": "#about",
+      "name": "About",
+      "outline": "solid"
+    },
+    {
+      "href": "#work",
+      "name": "Explore the work↘",
+      "outline": "solid"
+    }
+  ]
+}

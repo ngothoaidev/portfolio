@@ -1,0 +1,103 @@
+/* Authoritative primitives and semantic roles. No alternate theme in Sprint 02. */
+:root {
+  --palette-paper: #f5f2e9;
+  --palette-ink: #242923;
+  --palette-forest: #395345;
+  --palette-stone: #596155;
+  --palette-rule: #cbcfc2;
+  --palette-sage: #d9e1d2;
+
+  --background: var(--palette-paper);
+  --surface: var(--palette-paper);
+  --foreground: var(--palette-ink);
+  --muted: var(--palette-stone);
+  --accent: var(--palette-forest);
+  --border: var(--palette-rule);
+  --focus: var(--palette-forest);
+  --selection: var(--palette-sage);
+  --selection-foreground: var(--palette-ink);
+
+  --space-1: .25rem;
+  --space-2: .5rem;
+  --space-3: .75rem;
+  --space-4: 1rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-18: 4.5rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+
+  --layout-max: 100rem;
+  --layout-gutter: clamp(var(--space-6), 5vw, var(--space-24));
+  --measure-body: 33rem;
+  --grid-columns: 12;
+  --grid-gap: var(--space-8);
+  --section-start: var(--space-12);
+  --section-end: var(--space-18);
+  --hero-start: var(--space-20);
+  --hero-end: var(--space-24);
+  --header-height: 7rem;
+  --target-min: 2.75rem;
+  --border-hairline: 1px solid var(--border);
+  --focus-width: 2px;
+  --focus-offset: var(--space-1);
+  --leading-body: 1.85;
+  --leading-ui: 1.7;
+  --leading-display: .95;
+  --leading-heading: 1.1;
+  --tracking-display: -.04em;
+  --tracking-heading: -.02em;
+  --tracking-meta: .06em;
+}
+
+@theme {
+  --font-sans: 'Geist', sans-serif;
+  --font-display: 'Instrument Serif', Georgia, serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+  --text-display: clamp(4.5rem, 8.9vw, 9rem);
+  --text-section: clamp(2.4rem, 4vw, 3.5rem);
+  --text-card: 2rem;
+  --text-body: .95rem;
+  --text-ui: .875rem;
+  --text-link: .8125rem;
+  --text-small: .75rem;
+  --text-meta: .6875rem;
+}
+
+/* Tailwind utilities reference semantic roles, not a second set of palette values. */
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-border: var(--border);
+  --color-focus: var(--focus);
+  --color-selection: var(--selection);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --grid-columns: 8;
+    --grid-gap: var(--space-6);
+    --hero-start: var(--space-14);
+    --hero-end: var(--space-18);
+  }
+}
+
+@media (max-width: 767px) {
+  :root {
+    --grid-columns: 4;
+    --grid-gap: var(--space-6);
+    --header-height: 5.5rem;
+    --hero-start: var(--space-8);
+    --hero-end: var(--space-14);
+    --section-start: var(--space-8);
+    --section-end: var(--space-12);
+    --text-display: clamp(3.75rem, 13vw, 6.5rem);
+  }
+}

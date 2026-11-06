@@ -1,4 +1,4 @@
-name: Sprint 01 checks
+name: Portfolio checks
 on:
   push:
   pull_request:

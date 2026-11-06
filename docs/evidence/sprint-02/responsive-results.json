@@ -1,0 +1,62 @@
+[
+  {
+    "animated": 0,
+    "client": 305,
+    "columns": 4,
+    "displaySize": "60px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "animated": 0,
+    "client": 375,
+    "columns": 4,
+    "displaySize": "60px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "animated": 0,
+    "client": 753,
+    "columns": 8,
+    "displaySize": "72px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "animated": 0,
+    "client": 819,
+    "columns": 8,
+    "displaySize": "74.226px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 819,
+    "width": 834
+  },
+  {
+    "animated": 0,
+    "client": 1009,
+    "columns": 12,
+    "displaySize": "91.136px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "animated": 0,
+    "client": 1425,
+    "columns": 12,
+    "displaySize": "128.16px",
+    "h1Count": 1,
+    "missingLabels": 0,
+    "scroll": 1425,
+    "width": 1440
+  }
+]

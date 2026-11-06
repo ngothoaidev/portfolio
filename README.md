@@ -1,6 +1,6 @@
 # Editorial portfolio
 
-Sprint 01 foundation for a Full-stack Software Engineer portfolio. Next.js App Router, TypeScript, Tailwind CSS, and local MDX. Uses Node.js **24.18.0**, pinned in `.nvmrc`, `.node-version`, and `package.json`. Switch to that version before installing.
+Sprint 02 editorial design system for a Full-stack Software Engineer portfolio. Next.js App Router, TypeScript, Tailwind CSS, and local MDX. Uses Node.js **24.18.0**, pinned in `.nvmrc`, `.node-version`, and `package.json`. Switch to that version before installing.
 
 ```sh
 npm ci
@@ -45,3 +45,14 @@ The homepage composes `SiteShell`, `Hero`, `SelectedWork`, and `About`. Layout c
 CSS separates primitive palette values from semantic surface, text, border, focus, and selection aliases. Tailwind colors reference the semantic aliases. The editorial grid uses four columns below 768px, eight from 768–1023px, and twelve from 1024px.
 
 GitHub Actions uses the pinned Node version and `npm ci`, then runs lint, typecheck, component regression tests, build, and production dependency audit. Development audit findings are reported separately with a documented acceptance decision. CI has not yet been executed on GitHub for these local changes.
+
+
+## Sprint 02 design system
+
+See [the design audit](docs/sprint-02-design-audit.md) and [implementation/verification report](docs/sprint-02-design-system.md).
+
+`src/app/tokens.css` owns the palette, semantic color roles, space/type scales, layout rhythm and focus/border treatments. `globals.css` applies CSS recipes without global heading styling. Use the small primitives in `src/components/ui` and `src/components/layout`; keep body text in semantic HTML/MDX rather than wrapping every paragraph.
+
+`DisplayHeading` owns the H1. `SectionHeading` defaults to H2, with H3 for project titles. `Eyebrow` supports paragraph or inline metadata. `Container` is shared by home and 404, and `Section` shares the work/about editorial grid. `TextLink` preserves native anchor behavior and an optional decorative arrow; `TechTag` is noninteractive metadata. No Button, standalone Divider, dark mode, feedback system, or client-side design-system runtime is needed by the current pages.
+
+Baseline and final browser evidence is checked in under `docs/evidence/sprint-02/`. These images document human visual review and are not automated pixel baselines. Actual project content is still empty.
