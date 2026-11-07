@@ -100,3 +100,19 @@ p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* Homepage experience: verified focus areas and a deliberately small contact CTA. */
+.hero-introduction { max-width: var(--measure-body); }
+.hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-2) var(--space-8); }
+.expertise-list { list-style: none; margin: var(--space-8) 0 0; padding: 0; }
+.expertise-area { display: grid; grid-template-columns: var(--space-8) minmax(0, 1fr); gap: var(--space-6); padding-block: var(--space-8); border-top: var(--border-hairline); }
+.expertise-index { color: var(--muted); padding-top: var(--space-2); }
+.expertise-area p, .contact-introduction { color: var(--muted); max-width: var(--measure-body); margin-top: var(--space-4); }
+.contact-links { display: flex; flex-wrap: wrap; gap: var(--space-4) var(--space-8); list-style: none; padding: 0; margin: var(--space-6) 0 0; }
+.project-card-featured { border-top-color: var(--accent); padding-top: var(--space-10); }
+.project-card-featured .card-title { font-size: var(--text-section); }
+@media (max-width: 767px) {
+  .site-header { flex-wrap: wrap; padding-block: var(--space-4); gap: var(--space-2) var(--space-6); }
+  .site-nav { flex-wrap: wrap; gap: var(--space-4); }
+  .expertise-area { grid-template-columns: var(--space-6) minmax(0, 1fr); gap: var(--space-4); }
+}

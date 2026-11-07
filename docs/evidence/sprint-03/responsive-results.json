@@ -1,0 +1,74 @@
+[
+  {
+    "clientWidth": 305,
+    "columns": 4,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 305,
+    "unlabelledImages": 0,
+    "width": 320
+  },
+  {
+    "clientWidth": 375,
+    "columns": 4,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 375,
+    "unlabelledImages": 0,
+    "width": 390
+  },
+  {
+    "clientWidth": 753,
+    "columns": 8,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 753,
+    "unlabelledImages": 0,
+    "width": 768
+  },
+  {
+    "clientWidth": 819,
+    "columns": 8,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 819,
+    "unlabelledImages": 0,
+    "width": 834
+  },
+  {
+    "clientWidth": 1009,
+    "columns": 12,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 1009,
+    "unlabelledImages": 0,
+    "width": 1024
+  },
+  {
+    "clientWidth": 1425,
+    "columns": 12,
+    "h1": 1,
+    "h2": 3,
+    "missingHashTargets": 0,
+    "missingSectionLabels": 0,
+    "motion": 0,
+    "scrollWidth": 1425,
+    "unlabelledImages": 0,
+    "width": 1440
+  }
+]

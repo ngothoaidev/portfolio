@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { getContactLinks, site } from '../../content/site';
+import { expertise, getVerifiedExpertise } from '../../content/expertise';
 
 export function SiteHeader() {
   return (
@@ -8,7 +10,8 @@ export function SiteHeader() {
       </Link>
       <nav aria-label="Main navigation" className="site-nav">
         <a href="#work">Work</a>
-        <a href="#about">About</a>
+        {getVerifiedExpertise(expertise).length > 0 && <a href="#expertise">Expertise</a>}
+        {getContactLinks(site).length > 0 && <a href="#contact">Contact</a>}
       </nav>
     </header>
   );

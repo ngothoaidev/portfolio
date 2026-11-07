@@ -1,0 +1,55 @@
+
+> editorial-portfolio@0.1.0 test
+> tsx --test tests/*.test.tsx
+
+✔ hero and work compose one H1 and a labelled H2 section (13.6183ms)
+✔ navigation links home and retains current section anchors (2.5185ms)
+✔ not-found container can preserve the keyboard-focusable main landmark (0.5353ms)
+✔ text link preserves native link behavior and hides its decorative arrow (0.5139ms)
+✔ cards communicate each development status with text, named links and static technology tags (3.1284ms)
+✔ text and focus palette meet contrast thresholds against paper and selection (1.5263ms)
+✔ contact omits the whole section when no approved destination exists (8.3328ms)
+✔ only approved GitHub is published without fabricated email, resume or availability (7.2135ms)
+✔ unverified expertise produces neither claims nor empty section dividers (0.7511ms)
+✔ expertise contains exactly the three owner-confirmed domains in a semantic list (5.3592ms)
+✔ only one published featured card is prominent and drafts cannot take that place (3.7386ms)
+✔ empty and draft-only content renders the empty state without leaking drafts (14.3979ms)
+✔ published content renders cards, development status and verified links (4.0654ms)
+✔ featured ordering is stable and never promotes a draft (1.9026ms)
+✔ covers keep alt text and dimensions; an MDX reference does not create a dead link (8.9592ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 806.2529
+
+> editorial-portfolio@0.1.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.mjs took 46ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1846ms
+  Running TypeScript ...
+  Finished TypeScript in 3.8s ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/3) ...
+✓ Generating static pages using 4 workers (3/3) in 1370ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+└ ○ /_not-found
+
+
+○  (Static)  prerendered as static content
+
+
+> editorial-portfolio@0.1.0 verify:export
+> node scripts/verify-homepage-export.mjs
+
+PASS exported homepage: headings, anchor targets, section labels, approved contact, omitted claims, noindex.

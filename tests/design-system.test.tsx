@@ -29,7 +29,7 @@ test('navigation links home and retains current section anchors', () => {
   const html = renderToStaticMarkup(<SiteHeader />);
   assert.match(html, /href="\/"/);
   assert.match(html, /href="#work"/);
-  assert.match(html, /href="#about"/);
+  assert.match(html, /href="#expertise"/);
   assert.match(html, /aria-label="Main navigation"/);
 });
 

@@ -6,9 +6,9 @@ import { TechTag } from '../ui/tech-tag';
 
 const statusLabels = { 'in-progress': 'In progress', completed: 'Completed', archived: 'Archived' };
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({ project, prominent = false }: { project: Project; prominent?: boolean }) {
   return (
-    <article className="project-card" aria-labelledby={`project-${project.slug}`}>
+    <article className={`project-card${prominent ? ' project-card-featured' : ''}`} aria-labelledby={`project-${project.slug}`}>
       {project.cover && (
         <Image className="project-cover" src={project.cover.src} alt={project.cover.alt}
           width={project.cover.width} height={project.cover.height} unoptimized />

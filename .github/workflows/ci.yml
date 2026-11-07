@@ -19,6 +19,7 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      - run: npm run verify:export
       - run: npm audit --omit=dev --audit-level=moderate
       - name: Report development dependency advisories (accepted risk in docs)
         continue-on-error: true

@@ -1,6 +1,6 @@
 # Editorial portfolio
 
-Sprint 02 editorial design system for a Full-stack Software Engineer portfolio. Next.js App Router, TypeScript, Tailwind CSS, and local MDX. Uses Node.js **24.18.0**, pinned in `.nvmrc`, `.node-version`, and `package.json`. Switch to that version before installing.
+Sprint 03 homepage experience for a Full-stack Software Engineer portfolio. Next.js App Router, TypeScript, Tailwind CSS, and local MDX. Uses Node.js **24.18.0**, pinned in `.nvmrc`, `.node-version`, and `package.json`. Switch to that version before installing.
 
 ```sh
 npm ci
@@ -14,6 +14,7 @@ npm run lint
 npm run typecheck
 npm test
 npm run build
+npm run verify:export
 ```
 
 `npm run build` exports static files to `out/`. Fonts are bundled locally; no runtime Google Fonts request is required.
@@ -56,3 +57,17 @@ See [the design audit](docs/sprint-02-design-audit.md) and [implementation/verif
 `DisplayHeading` owns the H1. `SectionHeading` defaults to H2, with H3 for project titles. `Eyebrow` supports paragraph or inline metadata. `Container` is shared by home and 404, and `Section` shares the work/about editorial grid. `TextLink` preserves native anchor behavior and an optional decorative arrow; `TechTag` is noninteractive metadata. No Button, standalone Divider, dark mode, feedback system, or client-side design-system runtime is needed by the current pages.
 
 Baseline and final browser evidence is checked in under `docs/evidence/sprint-02/`. These images document human visual review and are not automated pixel baselines. Actual project content is still empty.
+
+
+## Sprint 03 homepage experience
+
+See [the Sprint 03 report](docs/sprint-03-homepage.md) for evidence, decisions and remaining owner inputs.
+
+The homepage now composes Hero, SelectedWork, EngineeringExpertise and Contact. The three expertise domains and public GitHub link were explicitly confirmed by the owner. Missing identity, employment, case studies, email, LinkedIn and resume remain omitted. The generic About scaffold was removed. Local MDX supplies the expertise introduction.
+
+- `src/content/site.ts` owns hero/site metadata and approved contact destinations; unknown destinations stay null. `getContactLinks` drives both contact rendering and navigation visibility.
+- `src/content/expertise.ts` holds the three typed owner-confirmed areas. A null `verifiedOn` excludes an area; no verified areas means no section.
+- `getPublishedProjects` remains the single selection source. The first published featured project can be prominent; the actual collection is still empty.
+- `npm run verify:export` checks the generated homepage after build for headings, labels, anchor targets, consented contact, noindex and excluded unsupported content. CI runs it after the production build.
+
+Do not infer employment, project completion or public contact consent from account metadata. Review content and verification dates before changing publication fields. No `/work/[slug]`, notes, backend, CMS or contact form exists.

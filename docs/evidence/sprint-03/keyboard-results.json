@@ -1,0 +1,45 @@
+{
+  "skipTarget": "main",
+  "traversal": [
+    {
+      "href": "#main",
+      "name": "Skip to content",
+      "outline": "solid"
+    },
+    {
+      "href": "/",
+      "name": "Portfolio.",
+      "outline": "solid"
+    },
+    {
+      "href": "#work",
+      "name": "Work",
+      "outline": "solid"
+    },
+    {
+      "href": "#expertise",
+      "name": "Expertise",
+      "outline": "solid"
+    },
+    {
+      "href": "#contact",
+      "name": "Contact",
+      "outline": "solid"
+    },
+    {
+      "href": "#work",
+      "name": "View selected work↘",
+      "outline": "solid"
+    },
+    {
+      "href": "#contact",
+      "name": "Get in touch",
+      "outline": "solid"
+    },
+    {
+      "href": "https://github.com/ngothoaidev",
+      "name": "GitHub↗",
+      "outline": "solid"
+    }
+  ]
+}

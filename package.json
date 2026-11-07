@@ -7,7 +7,8 @@
     "build": "next build",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
-    "test": "tsx --test tests/*.test.tsx"
+    "test": "tsx --test tests/*.test.tsx",
+    "verify:export": "node scripts/verify-homepage-export.mjs"
   },
   "dependencies": {
     "@fontsource/geist": "^5.3.0",

@@ -13,7 +13,7 @@ export function SelectedWork({ projects }: { projects: readonly Project[] }) {
       </div>
       {published.length > 0 ? (
         <ul className="project-list">
-          {published.map((project) => <li key={project.slug}><ProjectCard project={project} /></li>)}
+          {published.map((project, index) => <li key={project.slug}><ProjectCard project={project} prominent={index === 0 && project.featured} /></li>)}
         </ul>
       ) : (
         <div className="empty-work">
