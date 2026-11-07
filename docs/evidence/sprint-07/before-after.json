@@ -1,0 +1,242 @@
+[
+  {
+    "route": "/",
+    "profile": "mobile",
+    "before": {
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0,
+        "TBT": 198
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 97,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 750.222,
+        "CLS": 0,
+        "TBT": 195.00000000000023
+      }
+    }
+  },
+  {
+    "route": "/",
+    "profile": "desktop",
+    "before": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0.02542784093469704,
+        "TBT": 0
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 11
+      }
+    }
+  },
+  {
+    "route": "/about/",
+    "profile": "mobile",
+    "before": {
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0.1428726227681341,
+        "TBT": 206
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 96,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0,
+        "TBT": 226
+      }
+    }
+  },
+  {
+    "route": "/about/",
+    "profile": "desktop",
+    "before": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 11
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 1
+      }
+    }
+  },
+  {
+    "route": "/work/",
+    "profile": "mobile",
+    "before": {
+      "scores": {
+        "performance": 91,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0.1432353939628505,
+        "TBT": 209
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0,
+        "TBT": 179
+      }
+    }
+  },
+  {
+    "route": "/work/",
+    "profile": "desktop",
+    "before": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 1
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 60
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 3
+      }
+    }
+  },
+  {
+    "route": "/work/online-auction/",
+    "profile": "mobile",
+    "before": {
+      "scores": {
+        "performance": 98,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 63
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0,
+        "TBT": 177
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 95,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "LCP": 810,
+        "CLS": 0,
+        "TBT": 250
+      }
+    }
+  },
+  {
+    "route": "/work/online-auction/",
+    "profile": "desktop",
+    "before": {
+      "scores": {
+        "performance": 99,
+        "accessibility": 100,
+        "best-practices": 96,
+        "seo": 63
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0.08201527974758423,
+        "TBT": 11
+      }
+    },
+    "after": {
+      "scores": {
+        "performance": 100,
+        "accessibility": 100,
+        "best-practices": 100,
+        "seo": 63
+      },
+      "metrics": {
+        "LCP": 260,
+        "CLS": 0,
+        "TBT": 11
+      }
+    }
+  }
+]

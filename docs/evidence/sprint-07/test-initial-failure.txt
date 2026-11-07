@@ -1,0 +1,68 @@
+
+> editorial-portfolio@0.1.0 test
+> tsx --test tests/*.test.tsx
+
+✔ draft and empty experience produce no section, employer or ghost timeline (7.7771ms)
+✔ experience enforces required approval, dates, order, IDs and evidence (43.1182ms)
+✔ contact requires explicit channel approval, safe URL, resume permission and local PDF (1.5499ms)
+✔ resume build validation rejects missing, unapproved and non-PDF files (8.8582ms)
+✔ hero and work compose one H1 and a labelled H2 section (14.5688ms)
+✔ navigation links home and retains current section anchors (3.7129ms)
+✔ not-found container can preserve the keyboard-focusable main landmark (0.7178ms)
+✔ text link preserves native link behavior and hides its decorative arrow (0.8971ms)
+✔ cards communicate each development status with text, named links and static technology tags (5.8413ms)
+✔ text and focus palette meet contrast thresholds against paper and selection (1.651ms)
+✔ contact omits the whole section when no approved destination exists (14.245ms)
+✔ only approved GitHub is published without fabricated email, resume or availability (7.8865ms)
+✔ unverified expertise produces neither claims nor empty section dividers (0.7709ms)
+✔ expertise contains exactly the three owner-confirmed domains in a semantic list (3.245ms)
+✔ only one published featured card is prominent and drafts cannot take that place (3.3364ms)
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+Error: Transform failed with 1 error:
+C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\scripts\qa\normalize-export.js:32:48: ERROR: Top-level await is currently not supported with the "cjs" output format
+    at failureErrorWithLog (C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\node_modules\esbuild\lib\main.js:1752:15)
+    at C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\node_modules\esbuild\lib\main.js:1019:50
+    at responseCallbacks.<computed> (C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\node_modules\esbuild\lib\main.js:886:9)
+    at handleIncomingPacket (C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\node_modules\esbuild\lib\main.js:941:12)
+    at Socket.readFromStdout (C:\Users\thoai\OneDrive\Documents\ChatGPT\Portfolio\node_modules\esbuild\lib\main.js:864:7)
+    at Socket.emit (node:events:509:28)
+    at addChunk (node:internal/streams/readable:563:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:514:3)
+    at Readable.push (node:internal/streams/readable:394:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23) {
+  name: 'TransformError',
+  code: 'ERR_REQUIRE_ASYNC_MODULE'
+}
+
+Node.js v24.18.0
+✖ tests\quality.test.tsx (573.4943ms)
+✔ empty and draft-only content renders the empty state without leaking drafts (21.9084ms)
+✔ published content renders cards, development status and verified links (3.3915ms)
+✔ featured ordering is stable and never promotes a draft (1.9073ms)
+✔ covers keep alt text and dimensions; an MDX reference does not create a dead link (8.8996ms)
+✔ second registry record keeps its own module, TOC and source; drafts/mismatches are rejected (15.6755ms)
+✔ registry validates duplicate, empty and missing section metadata (0.9761ms)
+✔ TOC matches actual authored headings in sequence, with no duplicate IDs (2.4307ms)
+✔ personal project scope requires explicit approved nonempty record (3.5075ms)
+✔ hero offers a direct published flagship path without unsupported career promises (3.0105ms)
+✔ only published registered content produces static slugs or links (3.3472ms)
+✔ archive renders one H1 and no draft content; empty state is intentional (23.9199ms)
+✔ publishing validates metadata, dates, URLs, registration and actual assets (4.3162ms)
+✔ figures expose alt text, intrinsic dimensions and a caption; decisions use a heading (11.1816ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 28
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 706.8812
+
+✖ failing tests:
+
+test at tests\quality.test.tsx:1:1
+✖ tests\quality.test.tsx (573.4943ms)
+  'test failed'

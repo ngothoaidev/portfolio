@@ -1,0 +1,42 @@
+
+> editorial-portfolio@0.1.0 test
+> tsx --test tests/*.test.tsx
+
+✔ draft and empty experience produce no section, employer or ghost timeline (8.0538ms)
+✔ experience enforces required approval, dates, order, IDs and evidence (148.1729ms)
+✔ contact requires explicit channel approval, safe URL, resume permission and local PDF (1.836ms)
+✔ resume build validation rejects missing, unapproved and non-PDF files (6.3424ms)
+✔ hero and work compose one H1 and a labelled H2 section (19.2285ms)
+✔ navigation links home and retains current section anchors (7.6956ms)
+✔ not-found container can preserve the keyboard-focusable main landmark (2.1443ms)
+✔ text link preserves native link behavior and hides its decorative arrow (1.1244ms)
+✔ cards communicate each development status with text, named links and static technology tags (6.4033ms)
+✔ text and focus palette meet contrast thresholds against paper and selection (1.2901ms)
+✔ contact omits the whole section when no approved destination exists (10.0926ms)
+✔ only approved GitHub is published without fabricated email, resume or availability (8.3567ms)
+✔ unverified expertise produces neither claims nor empty section dividers (0.7892ms)
+✔ expertise contains exactly the three owner-confirmed domains in a semantic list (4.4993ms)
+✔ only one published featured card is prominent and drafts cannot take that place (3.0911ms)
+✔ static payload normalization preserves bytes and already-flat exports (149.6672ms)
+✔ static preview serves MIME, slash redirect, router payload and true 404 fallback (274.5992ms)
+✔ empty and draft-only content renders the empty state without leaking drafts (16.6111ms)
+✔ published content renders cards, development status and verified links (3.1331ms)
+✔ featured ordering is stable and never promotes a draft (1.3868ms)
+✔ covers keep alt text and dimensions; an MDX reference does not create a dead link (10.1197ms)
+✔ second registry record keeps its own module, TOC and source; drafts/mismatches are rejected (27.0017ms)
+✔ registry validates duplicate, empty and missing section metadata (1.2618ms)
+✔ TOC matches actual authored headings in sequence, with no duplicate IDs (7.0819ms)
+✔ personal project scope requires explicit approved nonempty record (4.9638ms)
+✔ hero offers a direct published flagship path without unsupported career promises (2.9095ms)
+✔ only published registered content produces static slugs or links (3.0478ms)
+✔ archive renders one H1 and no draft content; empty state is intentional (28.5097ms)
+✔ publishing validates metadata, dates, URLs, registration and actual assets (5.2652ms)
+✔ figures expose alt text, intrinsic dimensions and a caption; decisions use a heading (7.9507ms)
+ℹ tests 30
+ℹ suites 0
+ℹ pass 30
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 794.2105

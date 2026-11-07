@@ -1,0 +1,135 @@
+[
+  {
+    "url": "https://online-auction-1-a3t4.onrender.com/",
+    "status": 200,
+    "finalUrl": "https://online-auction-1-a3t4.onrender.com/",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:03:59.225Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:03:59.536Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:03:59.796Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/architecture.md",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/architecture.md",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:03:59.827Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/adr/0002-architecture-decisions.md",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/adr/0002-architecture-decisions.md",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:00.515Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/bidding.test.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/bidding.test.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:00.689Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/realtime.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/realtime.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:00.825Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/auctionCommands.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/auctionCommands.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:00.864Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/outbox.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/outbox.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:01.532Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/settlement.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/settlement.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:01.566Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/outbox.test.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/outbox.test.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:01.648Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/idempotency.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/idempotency.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:01.681Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/settlement.test.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/settlement.test.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:02.481Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/feature-matrix.md",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/feature-matrix.md",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:02.491Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/bidding.test.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/bidding.test.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:02.533Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/domain/orderTransitions.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/domain/orderTransitions.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:02.657Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/report-t23.md",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/report-t23.md",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:03.409Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/load-t23.json",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/load-t23.json",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:03.575Z"
+  },
+  {
+    "url": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/orderTransitions.test.js",
+    "status": 200,
+    "finalUrl": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/orderTransitions.test.js",
+    "method": "HEAD",
+    "checkedAt": "2026-11-07T23:04:03.576Z"
+  }
+]

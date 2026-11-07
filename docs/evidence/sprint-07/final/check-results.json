@@ -1,0 +1,30 @@
+[
+  {
+    "exitCode": 0,
+    "command": "npm run lint"
+  },
+  {
+    "exitCode": 0,
+    "command": "npm run typecheck"
+  },
+  {
+    "exitCode": 0,
+    "command": "npm test"
+  },
+  {
+    "exitCode": 0,
+    "command": "npm run verify:export"
+  },
+  {
+    "exitCode": 0,
+    "command": "npm audit --omit=dev --audit-level=moderate"
+  },
+  {
+    "exitCode": 1,
+    "command": "npm audit --json"
+  },
+  {
+    "command": "npm test (retest after removing CLI top-level await for tsx compatibility)",
+    "exitCode": 0
+  }
+]

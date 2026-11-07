@@ -1,0 +1,40 @@
+
+> editorial-portfolio@0.1.0 test
+> tsx --test tests/*.test.tsx
+
+✔ draft and empty experience produce no section, employer or ghost timeline (9.2746ms)
+✔ experience enforces required approval, dates, order, IDs and evidence (56.1562ms)
+✔ contact requires explicit channel approval, safe URL, resume permission and local PDF (1.9836ms)
+✔ resume build validation rejects missing, unapproved and non-PDF files (5.5882ms)
+✔ hero and work compose one H1 and a labelled H2 section (12.0274ms)
+✔ navigation links home and retains current section anchors (3.0479ms)
+✔ not-found container can preserve the keyboard-focusable main landmark (0.6413ms)
+✔ text link preserves native link behavior and hides its decorative arrow (0.5446ms)
+✔ cards communicate each development status with text, named links and static technology tags (4.6409ms)
+✔ text and focus palette meet contrast thresholds against paper and selection (1.6812ms)
+✔ contact omits the whole section when no approved destination exists (9.0819ms)
+✔ only approved GitHub is published without fabricated email, resume or availability (8.5116ms)
+✔ unverified expertise produces neither claims nor empty section dividers (1.3236ms)
+✔ expertise contains exactly the three owner-confirmed domains in a semantic list (4.3653ms)
+✔ only one published featured card is prominent and drafts cannot take that place (3.7948ms)
+✔ empty and draft-only content renders the empty state without leaking drafts (17.9036ms)
+✔ published content renders cards, development status and verified links (3.7565ms)
+✔ featured ordering is stable and never promotes a draft (1.5874ms)
+✔ covers keep alt text and dimensions; an MDX reference does not create a dead link (10.4001ms)
+✔ second registry record keeps its own module, TOC and source; drafts/mismatches are rejected (17.739ms)
+✔ registry validates duplicate, empty and missing section metadata (1.3757ms)
+✔ TOC matches actual authored headings in sequence, with no duplicate IDs (2.8266ms)
+✔ personal project scope requires explicit approved nonempty record (4.05ms)
+✔ hero offers a direct published flagship path without unsupported career promises (2.9414ms)
+✔ only published registered content produces static slugs or links (2.7568ms)
+✔ archive renders one H1 and no draft content; empty state is intentional (18.3693ms)
+✔ publishing validates metadata, dates, URLs, registration and actual assets (4.3048ms)
+✔ figures expose alt text, intrinsic dimensions and a caption; decisions use a heading (6.6095ms)
+ℹ tests 28
+ℹ suites 0
+ℹ pass 28
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 718.4346

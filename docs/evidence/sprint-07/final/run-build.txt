@@ -1,0 +1,33 @@
+
+> editorial-portfolio@0.1.0 build
+> next build && node scripts/qa/normalize-export.mjs
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.mjs took 41ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 920ms
+  Running TypeScript ...
+  Finished TypeScript in 1972ms ...
+  Collecting page data using 8 workers ...
+  Generating static pages using 8 workers (0/7) ...
+  Generating static pages using 8 workers (1/7) 
+  Generating static pages using 8 workers (3/7) 
+  Generating static pages using 8 workers (5/7) 
+✓ Generating static pages using 8 workers (7/7) in 1115ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ○ /icon.svg
+├ ○ /work
+└   /work/[slug]
+  └ ● /work/online-auction
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+Static router payload aliases: 4

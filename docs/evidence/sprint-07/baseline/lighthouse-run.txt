@@ -1,0 +1,8 @@
+/ mobile: {"performance":97,"accessibility":100,"best-practices":96,"seo":60}
+/ desktop: {"performance":100,"accessibility":100,"best-practices":96,"seo":60}
+/about/ mobile: {"performance":91,"accessibility":100,"best-practices":96,"seo":60}
+/about/ desktop: {"performance":100,"accessibility":100,"best-practices":96,"seo":60}
+/work/ mobile: {"performance":91,"accessibility":100,"best-practices":96,"seo":60}
+/work/ desktop: {"performance":100,"accessibility":100,"best-practices":96,"seo":60}
+/work/online-auction/ mobile: {"performance":98,"accessibility":100,"best-practices":96,"seo":63}
+/work/online-auction/ desktop: {"performance":99,"accessibility":100,"best-practices":96,"seo":63}

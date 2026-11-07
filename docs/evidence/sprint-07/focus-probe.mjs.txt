@@ -1,0 +1,2 @@
+import {webkit,firefox} from 'playwright';
+for(const [name,type] of Object.entries({webkit,firefox})) {const b=await type.launch();const p=await b.newPage();await p.goto('http://127.0.0.1:3007/');for(const key of ['Tab','Enter','Tab','Alt+Tab']) {await p.keyboard.press(key);await p.waitForTimeout(100);console.log(name,key,await p.evaluate(()=>({active:document.activeElement.outerHTML.slice(0,300),hash:location.hash})));}await b.close();}

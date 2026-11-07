@@ -1,0 +1,15 @@
+{
+  "method": "Playwright WebKit 27.2 and Firefox 159.0 isolated page probe on unchanged production export",
+  "webkit": [
+    {"key":"Tab","activeElement":"BODY","hash":""},
+    {"key":"Enter","activeElement":"BODY","hash":""},
+    {"key":"Tab","activeElement":"BODY","hash":""},
+    {"key":"Alt+Tab","activeElement":"BODY","hash":""}
+  ],
+  "firefox": [
+    {"key":"Tab","activeElement":"A.skip-link","hash":""},
+    {"key":"Enter","activeElement":"MAIN#main","hash":"#main"},
+    {"key":"Tab","activeElement":"A.text-link flagship study","hash":"#main"}
+  ],
+  "recordType": "Observed probe output transcribed from execution; original probe script preserved in focus-probe.mjs.txt. Not a Safari keyboard pass."
+}

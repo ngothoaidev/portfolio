@@ -1,0 +1,359 @@
+{
+  "metadata": [
+    {
+      "file": "index.html",
+      "title": "Portfolio — Full-stack Software Engineer",
+      "description": "Full-stack Software Engineer: React interfaces, Node.js APIs and PostgreSQL. Read source-backed engineering decisions, verification and limitations.",
+      "robots": "noindex, nofollow",
+      "canonical": "Not configured: no approved origin",
+      "social": "No invented identity or absolute origin"
+    },
+    {
+      "file": "about/index.html",
+      "title": "About — Portfolio",
+      "description": "An engineering approach across interfaces, APIs and development workflows, with source-backed case studies and explicitly scoped evidence.",
+      "robots": "noindex, nofollow",
+      "canonical": "Not configured: no approved origin",
+      "social": "No invented identity or absolute origin"
+    },
+    {
+      "file": "work/index.html",
+      "title": "Work — Portfolio",
+      "description": "Source-backed engineering case studies: user problems, implementation decisions, trade-offs, verification and explicit limits.",
+      "robots": "noindex, nofollow",
+      "canonical": "Not configured: no approved origin",
+      "social": "No invented identity or absolute origin"
+    },
+    {
+      "file": "work/online-auction/index.html",
+      "title": "Online-Auction — Portfolio",
+      "description": "When bids compete and buyers retry: a source-backed study of auction ordering, transactional idempotency, and background settlement.",
+      "robots": "noindex, nofollow",
+      "canonical": "Not configured: no approved origin",
+      "social": "No invented identity or absolute origin"
+    },
+    {
+      "file": "404.html",
+      "title": "Portfolio — Full-stack Software Engineer",
+      "description": "Full-stack Software Engineer: React interfaces, Node.js APIs and PostgreSQL. Read source-backed engineering decisions, verification and limitations.",
+      "robots": "noindex, nofollow",
+      "canonical": "Not configured: no approved origin",
+      "social": "No invented identity or absolute origin"
+    }
+  ],
+  "assets": [
+    {
+      "path": "out/404/index.html",
+      "type": ".html",
+      "bytes": 7218,
+      "gzipBytes": 2012
+    },
+    {
+      "path": "out/404.html",
+      "type": ".html",
+      "bytes": 7218,
+      "gzipBytes": 2012
+    },
+    {
+      "path": "out/about/index.html",
+      "type": ".html",
+      "bytes": 16265,
+      "gzipBytes": 3839
+    },
+    {
+      "path": "out/about/index.txt",
+      "type": ".txt",
+      "bytes": 9185,
+      "gzipBytes": 2673
+    },
+    {
+      "path": "out/about/__next.about/__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 7821,
+      "gzipBytes": 2425
+    },
+    {
+      "path": "out/about/__next.about.__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 7821,
+      "gzipBytes": 2425
+    },
+    {
+      "path": "out/about/__next._full.txt",
+      "type": ".txt",
+      "bytes": 9185,
+      "gzipBytes": 2673
+    },
+    {
+      "path": "out/about/__next._tree.txt",
+      "type": ".txt",
+      "bytes": 842,
+      "gzipBytes": 343
+    },
+    {
+      "path": "out/icon.svg",
+      "type": ".svg",
+      "bytes": 166,
+      "gzipBytes": 151
+    },
+    {
+      "path": "out/index.html",
+      "type": ".html",
+      "bytes": 24547,
+      "gzipBytes": 4874
+    },
+    {
+      "path": "out/index.txt",
+      "type": ".txt",
+      "bytes": 13752,
+      "gzipBytes": 3299
+    },
+    {
+      "path": "out/work/index.html",
+      "type": ".html",
+      "bytes": 14802,
+      "gzipBytes": 3598
+    },
+    {
+      "path": "out/work/index.txt",
+      "type": ".txt",
+      "bytes": 8459,
+      "gzipBytes": 2473
+    },
+    {
+      "path": "out/work/online-auction/index.html",
+      "type": ".html",
+      "bytes": 44274,
+      "gzipBytes": 9418
+    },
+    {
+      "path": "out/work/online-auction/index.txt",
+      "type": ".txt",
+      "bytes": 24299,
+      "gzipBytes": 7014
+    },
+    {
+      "path": "out/work/online-auction/__next.work/$d$slug/__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 22669,
+      "gzipBytes": 6704
+    },
+    {
+      "path": "out/work/online-auction/__next.work.$d$slug.__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 22669,
+      "gzipBytes": 6704
+    },
+    {
+      "path": "out/work/online-auction/__next._full.txt",
+      "type": ".txt",
+      "bytes": 24299,
+      "gzipBytes": 7014
+    },
+    {
+      "path": "out/work/online-auction/__next._tree.txt",
+      "type": ".txt",
+      "bytes": 941,
+      "gzipBytes": 391
+    },
+    {
+      "path": "out/work/online-auction-architecture.svg",
+      "type": ".svg",
+      "bytes": 1858,
+      "gzipBytes": 776
+    },
+    {
+      "path": "out/work/__next.work/__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 7076,
+      "gzipBytes": 2211
+    },
+    {
+      "path": "out/work/__next.work.__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 7076,
+      "gzipBytes": 2211
+    },
+    {
+      "path": "out/work/__next._full.txt",
+      "type": ".txt",
+      "bytes": 8459,
+      "gzipBytes": 2473
+    },
+    {
+      "path": "out/work/__next._tree.txt",
+      "type": ".txt",
+      "bytes": 841,
+      "gzipBytes": 342
+    },
+    {
+      "path": "out/_next/static/chunks/02_dxz46xbb4e.js",
+      "type": ".js",
+      "bytes": 22708,
+      "gzipBytes": 8334
+    },
+    {
+      "path": "out/_next/static/chunks/0c98xzjfks9hq.js",
+      "type": ".js",
+      "bytes": 169973,
+      "gzipBytes": 46689
+    },
+    {
+      "path": "out/_next/static/chunks/0cz1d0mv5g_q7.js",
+      "type": ".js",
+      "bytes": 112594,
+      "gzipBytes": 39627
+    },
+    {
+      "path": "out/_next/static/chunks/17ka7qkf1il8e.css",
+      "type": ".css",
+      "bytes": 23317,
+      "gzipBytes": 5549
+    },
+    {
+      "path": "out/_next/static/chunks/1pcw6gskne7pf.js",
+      "type": ".js",
+      "bytes": 5600,
+      "gzipBytes": 2030
+    },
+    {
+      "path": "out/_next/static/chunks/1wnov70f88xjy.js",
+      "type": ".js",
+      "bytes": 29127,
+      "gzipBytes": 7650
+    },
+    {
+      "path": "out/_next/static/chunks/3jn_x8ihwq16e.js",
+      "type": ".js",
+      "bytes": 229052,
+      "gzipBytes": 71681
+    },
+    {
+      "path": "out/_next/static/chunks/3qfy96eoyh-ek.js",
+      "type": ".js",
+      "bytes": 13994,
+      "gzipBytes": 3515
+    },
+    {
+      "path": "out/_next/static/chunks/3zt_16xndew4w.js",
+      "type": ".js",
+      "bytes": 7862,
+      "gzipBytes": 3302
+    },
+    {
+      "path": "out/_next/static/chunks/turbopack-2u1d16houkiyo.js",
+      "type": ".js",
+      "bytes": 9974,
+      "gzipBytes": 3905
+    },
+    {
+      "path": "out/_next/static/media/geist_latin_400_normal-s.p.383tfv-wiktxb.woff2",
+      "type": ".woff2",
+      "bytes": 12956,
+      "gzipBytes": 12979
+    },
+    {
+      "path": "out/_next/static/media/geist_latin_500_normal-s.p.38l4-nuansk4e.woff2",
+      "type": ".woff2",
+      "bytes": 13296,
+      "gzipBytes": 13319
+    },
+    {
+      "path": "out/_next/static/media/ibm_plex_mono_latin_400_normal-s.p.3xdfs0-p_zi4c.woff2",
+      "type": ".woff2",
+      "bytes": 14708,
+      "gzipBytes": 14731
+    },
+    {
+      "path": "out/_next/static/media/icon.3tbu4j47s_oi2.svg",
+      "type": ".svg",
+      "bytes": 166,
+      "gzipBytes": 151
+    },
+    {
+      "path": "out/_next/static/media/instrument_serif_latin_400_italic-s.p.1bk2-9tco4m7m.woff2",
+      "type": ".woff2",
+      "bytes": 22128,
+      "gzipBytes": 22156
+    },
+    {
+      "path": "out/_next/static/media/instrument_serif_latin_400_normal-s.p.3_vslfxq_--4i.woff2",
+      "type": ".woff2",
+      "bytes": 21032,
+      "gzipBytes": 21054
+    },
+    {
+      "path": "out/_next/static/qCpDLa2yMtU4fQJ2Ay5Uz/_buildManifest.js",
+      "type": ".js",
+      "bytes": 219,
+      "gzipBytes": 154
+    },
+    {
+      "path": "out/_next/static/qCpDLa2yMtU4fQJ2Ay5Uz/_clientMiddlewareManifest.js",
+      "type": ".js",
+      "bytes": 96,
+      "gzipBytes": 66
+    },
+    {
+      "path": "out/_next/static/qCpDLa2yMtU4fQJ2Ay5Uz/_ssgManifest.js",
+      "type": ".js",
+      "bytes": 104,
+      "gzipBytes": 84
+    },
+    {
+      "path": "out/_not-found/index.html",
+      "type": ".html",
+      "bytes": 7218,
+      "gzipBytes": 2012
+    },
+    {
+      "path": "out/_not-found/index.txt",
+      "type": ".txt",
+      "bytes": 4278,
+      "gzipBytes": 1337
+    },
+    {
+      "path": "out/_not-found/__next._full.txt",
+      "type": ".txt",
+      "bytes": 4278,
+      "gzipBytes": 1337
+    },
+    {
+      "path": "out/_not-found/__next._not-found/__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 3560,
+      "gzipBytes": 1239
+    },
+    {
+      "path": "out/_not-found/__next._not-found.__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 3560,
+      "gzipBytes": 1239
+    },
+    {
+      "path": "out/_not-found/__next._tree.txt",
+      "type": ".txt",
+      "bytes": 218,
+      "gzipBytes": 185
+    },
+    {
+      "path": "out/__next._full.txt",
+      "type": ".txt",
+      "bytes": 13752,
+      "gzipBytes": 3299
+    },
+    {
+      "path": "out/__next._tree.txt",
+      "type": ".txt",
+      "bytes": 794,
+      "gzipBytes": 327
+    },
+    {
+      "path": "out/__next.__PAGE__.txt",
+      "type": ".txt",
+      "bytes": 12575,
+      "gzipBytes": 3034
+    }
+  ],
+  "security": "Targeted signatures and forbidden fixtures only; not a proof of absence of every secret. Deployment headers/HTTPS are not enabled by this script."
+}

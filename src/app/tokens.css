@@ -55,9 +55,9 @@
 }
 
 @theme {
-  --font-sans: 'Geist', sans-serif;
-  --font-display: 'Instrument Serif', Georgia, serif;
-  --font-mono: 'IBM Plex Mono', monospace;
+  --font-sans: var(--font-geist), sans-serif;
+  --font-display: var(--font-instrument), Georgia, serif;
+  --font-mono: var(--font-plex), monospace;
   --text-display: clamp(4.5rem, 8.9vw, 9rem);
   --text-section: clamp(2.4rem, 4vw, 3.5rem);
   --text-card: 2rem;

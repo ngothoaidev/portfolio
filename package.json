@@ -4,11 +4,15 @@
   "description": "Editorial minimalist software engineering portfolio",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/qa/normalize-export.mjs",
     "lint": "eslint . --max-warnings=0",
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.tsx",
-    "verify:export": "node scripts/verify-homepage-export.mjs && node scripts/verify-work-export.mjs"
+    "verify:export": "node scripts/verify-homepage-export.mjs && node scripts/verify-work-export.mjs && node scripts/qa/inspect-export.mjs",
+    "qa:a11y": "node scripts/qa/accessibility.mjs",
+    "qa:browsers": "node scripts/qa/browsers.mjs",
+    "qa:lighthouse": "node scripts/qa/lighthouse.mjs",
+    "preview:export": "node scripts/qa/static-server.mjs"
   },
   "dependencies": {
     "@fontsource/geist": "^5.3.0",
@@ -26,6 +30,7 @@
     "node": "24.18.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "4.14.0",
     "@tailwindcss/postcss": "^4.3.4",
     "@types/mdx": "^2.0.14",
     "@types/node": "^24.19.2",
@@ -33,6 +38,8 @@
     "@types/react-dom": "^19.3.0",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.4.5",
+    "lighthouse": "13.6.0",
+    "playwright": "1.65.0",
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.4",
     "tsx": "^4.23.15",

@@ -1,0 +1,6293 @@
+{
+  "engines": [
+    {
+      "engine": "chromium",
+      "status": "TESTED",
+      "version": "158.0.8127.18"
+    },
+    {
+      "engine": "firefox",
+      "status": "TESTED",
+      "version": "159.0"
+    },
+    {
+      "engine": "webkit",
+      "status": "TESTED",
+      "version": "27.2"
+    }
+  ],
+  "responsive": [
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 320,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 390,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 768,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 834,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 1024,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [
+        {
+          "src": "/work/online-auction-architecture.svg",
+          "loaded": true
+        }
+      ],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "width": 1440,
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "main": 1,
+      "fonts": [
+        {
+          "family": "geist",
+          "status": "loaded"
+        },
+        {
+          "family": "geist",
+          "status": "unloaded"
+        },
+        {
+          "family": "geist Fallback",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "loaded"
+        },
+        {
+          "family": "instrument",
+          "status": "unloaded"
+        },
+        {
+          "family": "instrument Fallback",
+          "status": "unloaded"
+        },
+        {
+          "family": "mono",
+          "status": "loaded"
+        },
+        {
+          "family": "mono Fallback",
+          "status": "unloaded"
+        }
+      ],
+      "images": [],
+      "reducedMotion": true,
+      "animations": 0,
+      "scrollBehavior": "auto",
+      "assetErrors": [],
+      "pass": true
+    }
+  ],
+  "keyboard": [
+    {
+      "engine": "chromium",
+      "route": "/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1875,
+          "height": 60.125,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.234375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.296875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.703125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.671875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.890625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Read Online-Auction case study↗",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 216.5,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Get in touch",
+          "href": "#contact",
+          "outline": "solid",
+          "width": 72.609375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "All work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 48.328125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "tag": "A",
+          "text": "Read Online-Auction case study",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 190.984375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "tag": "A",
+          "text": "Audited source for Online-Auction↗",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 114.546875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "tag": "A",
+          "text": "Demo (may cold-start) for Online-Auction↗",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 158.0625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "tag": "A",
+          "text": "GitHub↗",
+          "href": "https://github.com/ngothoaidev",
+          "outline": "solid",
+          "width": 66.1875,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1875,
+          "height": 60.125,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.234375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.296875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.703125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.671875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.890625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Explore the work↗",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 126.03125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Read the Online-Auction case study↗",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 239.328125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "GitHub↗",
+          "href": "https://github.com/ngothoaidev",
+          "outline": "solid",
+          "width": 66.1875,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1875,
+          "height": 60.125,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.234375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.296875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.703125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.671875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.890625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Read Online-Auction case study",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 190.984375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Audited source for Online-Auction↗",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 114.546875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "Demo (may cold-start) for Online-Auction↗",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 158.0625,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1875,
+          "height": 60.125,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.234375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.296875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.703125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.671875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.890625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Back to work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 79.140625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Audited source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 89.03125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "Demo (may cold-start)",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 132.546875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "tag": "A",
+          "text": "Context",
+          "href": "#overview",
+          "outline": "solid",
+          "width": 43.328125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "tag": "A",
+          "text": "Scope & attribution",
+          "href": "#scope",
+          "outline": "solid",
+          "width": 104.125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "tag": "A",
+          "text": "Problem",
+          "href": "#problem",
+          "outline": "solid",
+          "width": 45.859375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "tag": "A",
+          "text": "Constraints",
+          "href": "#constraints",
+          "outline": "solid",
+          "width": 63.40625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "tag": "A",
+          "text": "Architecture",
+          "href": "#architecture",
+          "outline": "solid",
+          "width": 67.28125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "tag": "A",
+          "text": "Engineering decisions",
+          "href": "#decisions",
+          "outline": "solid",
+          "width": 119.84375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "tag": "A",
+          "text": "Implementation",
+          "href": "#implementation",
+          "outline": "solid",
+          "width": 85.5625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "tag": "A",
+          "text": "Verification",
+          "href": "#verification",
+          "outline": "solid",
+          "width": 61.421875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "tag": "A",
+          "text": "Outcomes",
+          "href": "#outcomes",
+          "outline": "solid",
+          "width": 56.375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "tag": "A",
+          "text": "Limitations & reflection",
+          "href": "#limitations",
+          "outline": "solid",
+          "width": 125.375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "tag": "A",
+          "text": "Architecture source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/architecture.md",
+          "outline": "solid",
+          "width": 135.890625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 20,
+          "tag": "A",
+          "text": "Technical decisions and alternatives",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/adr/0002-architecture-decisions.md",
+          "outline": "solid",
+          "width": 701.671875,
+          "height": 47.125,
+          "visible": true
+        },
+        {
+          "index": 21,
+          "tag": "DIV",
+          "text": "",
+          "href": null,
+          "outline": "solid",
+          "width": 705.421875,
+          "height": 562,
+          "visible": true
+        },
+        {
+          "index": 22,
+          "tag": "A",
+          "text": "SSE implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/realtime.js",
+          "outline": "solid",
+          "width": 140.578125,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 23,
+          "tag": "A",
+          "text": "lockAuction, dbClock and placeBid",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/auctionCommands.js",
+          "outline": "solid",
+          "width": 241.65625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 24,
+          "tag": "A",
+          "text": "integration test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/bidding.test.js",
+          "outline": "solid",
+          "width": 156.546875,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 25,
+          "tag": "A",
+          "text": "Idempotency source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/idempotency.js",
+          "outline": "solid",
+          "width": 140.890625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 26,
+          "tag": "A",
+          "text": "Outbox implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/outbox.js",
+          "outline": "solid",
+          "width": 162.765625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 27,
+          "tag": "A",
+          "text": "rollback, retry and fencing test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/outbox.test.js",
+          "outline": "solid",
+          "width": 263.0625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 28,
+          "tag": "A",
+          "text": "Settlement implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/settlement.js",
+          "outline": "solid",
+          "width": 188.359375,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 29,
+          "tag": "A",
+          "text": "settlement test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/settlement.test.js",
+          "outline": "solid",
+          "width": 156.390625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 30,
+          "tag": "A",
+          "text": "Order rules",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/domain/orderTransitions.js",
+          "outline": "solid",
+          "width": 77.671875,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 31,
+          "tag": "A",
+          "text": "feature status and open work",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/feature-matrix.md",
+          "outline": "solid",
+          "width": 203.5,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 32,
+          "tag": "A",
+          "text": "Executed bidding suite source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/bidding.test.js",
+          "outline": "solid",
+          "width": 208.265625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 33,
+          "tag": "A",
+          "text": "executed order-transition suite source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/orderTransitions.test.js",
+          "outline": "solid",
+          "width": 263.921875,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 34,
+          "tag": "A",
+          "text": "T23 report and caveats",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/report-t23.md",
+          "outline": "solid",
+          "width": 160.109375,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 35,
+          "tag": "A",
+          "text": "raw measurement artifact",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/load-t23.json",
+          "outline": "solid",
+          "width": 179,
+          "height": 19,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1875,
+          "height": 60.125,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Return to the portfolio↗",
+          "href": "/",
+          "outline": "solid",
+          "width": 156.78125,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1999969482422,
+          "height": 60.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.18333435058594,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.26667785644531,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.69999694824219,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.649993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.866668701171875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Read Online-Auction case study↗",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 216.4833221435547,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Get in touch",
+          "href": "#contact",
+          "outline": "solid",
+          "width": 72.60000610351562,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "All work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 48.30000305175781,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "tag": "A",
+          "text": "Read Online-Auction case study",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 190.96665954589844,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "tag": "A",
+          "text": "Audited source for Online-Auction↗",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 114.51666259765625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "tag": "A",
+          "text": "Demo (may cold-start) for Online-Auction↗",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 158.0833282470703,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "tag": "A",
+          "text": "GitHub↗",
+          "href": "https://github.com/ngothoaidev",
+          "outline": "solid",
+          "width": 66.18333435058594,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1999969482422,
+          "height": 60.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.18333435058594,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.26667785644531,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.69999694824219,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.649993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.866668701171875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Explore the work↗",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 126.0333251953125,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Read the Online-Auction case study↗",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 239.31666564941406,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "GitHub↗",
+          "href": "https://github.com/ngothoaidev",
+          "outline": "solid",
+          "width": 66.18333435058594,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1999969482422,
+          "height": 60.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.18333435058594,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.26667785644531,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.69999694824219,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.649993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.866668701171875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Read Online-Auction case study",
+          "href": "/work/online-auction/",
+          "outline": "solid",
+          "width": 190.96665954589844,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Audited source for Online-Auction↗",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 114.51666259765625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "Demo (may cold-start) for Online-Auction↗",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 158.0833282470703,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1999969482422,
+          "height": 60.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Portfolio.",
+          "href": "/",
+          "outline": "solid",
+          "width": 101.18333435058594,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 2,
+          "tag": "A",
+          "text": "About",
+          "href": "/about/",
+          "outline": "solid",
+          "width": 38.26667785644531,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 3,
+          "tag": "A",
+          "text": "Work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 33.69999694824219,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 4,
+          "tag": "A",
+          "text": "Expertise",
+          "href": "/#expertise",
+          "outline": "solid",
+          "width": 59.649993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 5,
+          "tag": "A",
+          "text": "Contact",
+          "href": "/#contact",
+          "outline": "solid",
+          "width": 50.866668701171875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 6,
+          "tag": "A",
+          "text": "Back to work",
+          "href": "/work/",
+          "outline": "solid",
+          "width": 79.11666870117188,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 7,
+          "tag": "A",
+          "text": "Audited source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+          "outline": "solid",
+          "width": 89,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 8,
+          "tag": "A",
+          "text": "Demo (may cold-start)",
+          "href": "https://online-auction-1-a3t4.onrender.com/",
+          "outline": "solid",
+          "width": 132.56666564941406,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 9,
+          "tag": "A",
+          "text": "Context",
+          "href": "#overview",
+          "outline": "solid",
+          "width": 43.31666564941406,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 10,
+          "tag": "A",
+          "text": "Scope & attribution",
+          "href": "#scope",
+          "outline": "solid",
+          "width": 104.10000610351562,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 11,
+          "tag": "A",
+          "text": "Problem",
+          "href": "#problem",
+          "outline": "solid",
+          "width": 45.850006103515625,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 12,
+          "tag": "A",
+          "text": "Constraints",
+          "href": "#constraints",
+          "outline": "solid",
+          "width": 63.399993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 13,
+          "tag": "A",
+          "text": "Architecture",
+          "href": "#architecture",
+          "outline": "solid",
+          "width": 67.30000305175781,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 14,
+          "tag": "A",
+          "text": "Engineering decisions",
+          "href": "#decisions",
+          "outline": "solid",
+          "width": 119.83332824707031,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 15,
+          "tag": "A",
+          "text": "Implementation",
+          "href": "#implementation",
+          "outline": "solid",
+          "width": 85.56666564941406,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 16,
+          "tag": "A",
+          "text": "Verification",
+          "href": "#verification",
+          "outline": "solid",
+          "width": 61.399993896484375,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 17,
+          "tag": "A",
+          "text": "Outcomes",
+          "href": "#outcomes",
+          "outline": "solid",
+          "width": 56.366668701171875,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 18,
+          "tag": "A",
+          "text": "Limitations & reflection",
+          "href": "#limitations",
+          "outline": "solid",
+          "width": 125.35000610351562,
+          "height": 44,
+          "visible": true
+        },
+        {
+          "index": 19,
+          "tag": "A",
+          "text": "Architecture source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/architecture.md",
+          "outline": "solid",
+          "width": 135.88333129882812,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 20,
+          "tag": "A",
+          "text": "Technical decisions and alternatives",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/adr/0002-architecture-decisions.md",
+          "outline": "solid",
+          "width": 701.6666870117188,
+          "height": 47.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 21,
+          "tag": "DIV",
+          "text": "",
+          "href": null,
+          "outline": "solid",
+          "width": 705.8333129882812,
+          "height": 562,
+          "visible": true
+        },
+        {
+          "index": 22,
+          "tag": "A",
+          "text": "SSE implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/realtime.js",
+          "outline": "solid",
+          "width": 140.5833282470703,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 23,
+          "tag": "A",
+          "text": "lockAuction, dbClock and placeBid",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/auctionCommands.js",
+          "outline": "solid",
+          "width": 241.64999389648438,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 24,
+          "tag": "A",
+          "text": "integration test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/bidding.test.js",
+          "outline": "solid",
+          "width": 156.54998779296875,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 25,
+          "tag": "A",
+          "text": "Idempotency source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/idempotency.js",
+          "outline": "solid",
+          "width": 140.9166717529297,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 26,
+          "tag": "A",
+          "text": "Outbox implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/outbox.js",
+          "outline": "solid",
+          "width": 162.78334045410156,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 27,
+          "tag": "A",
+          "text": "rollback, retry and fencing test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/outbox.test.js",
+          "outline": "solid",
+          "width": 263.066650390625,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 28,
+          "tag": "A",
+          "text": "Settlement implementation",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/services/settlement.js",
+          "outline": "solid",
+          "width": 188.36666870117188,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 29,
+          "tag": "A",
+          "text": "settlement test source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/integration/settlement.test.js",
+          "outline": "solid",
+          "width": 156.39999389648438,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 30,
+          "tag": "A",
+          "text": "Order rules",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/domain/orderTransitions.js",
+          "outline": "solid",
+          "width": 77.66667175292969,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 31,
+          "tag": "A",
+          "text": "feature status and open work",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/feature-matrix.md",
+          "outline": "solid",
+          "width": 203.48333740234375,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 32,
+          "tag": "A",
+          "text": "Executed bidding suite source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/bidding.test.js",
+          "outline": "solid",
+          "width": 208.3000030517578,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 33,
+          "tag": "A",
+          "text": "executed order-transition suite source",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/backend/tests/unit/orderTransitions.test.js",
+          "outline": "solid",
+          "width": 263.933349609375,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 34,
+          "tag": "A",
+          "text": "T23 report and caveats",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/report-t23.md",
+          "outline": "solid",
+          "width": 160.11666870117188,
+          "height": 19,
+          "visible": true
+        },
+        {
+          "index": 35,
+          "tag": "A",
+          "text": "raw measurement artifact",
+          "href": "https://github.com/ngothoaidev/Online-Auction/blob/303ae3348c8456fc4b5f83fe850b2b14db80a688/docs/validation/load-t23.json",
+          "outline": "solid",
+          "width": 179.01666259765625,
+          "height": 19,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "skip": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "stops": [
+        {
+          "index": 0,
+          "tag": "A",
+          "text": "Skip to content",
+          "href": "#main",
+          "outline": "solid",
+          "width": 138.1999969482422,
+          "height": 60.116668701171875,
+          "visible": true
+        },
+        {
+          "index": 1,
+          "tag": "A",
+          "text": "Return to the portfolio↗",
+          "href": "/",
+          "outline": "solid",
+          "width": 156.76666259765625,
+          "height": 44,
+          "visible": true
+        }
+      ],
+      "reversePass": true,
+      "pass": true
+    },
+    {
+      "engine": "webkit",
+      "status": "NOT TESTED",
+      "reason": "This Windows WebKit build does not focus links with Tab or Alt+Tab; isolated default-link probe reproduced it. Native Safari keyboard preferences and traversal require owner review."
+    }
+  ],
+  "reflow": [
+    {
+      "engine": "chromium",
+      "route": "/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/about/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "chromium",
+      "route": "/404.html",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/about/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "firefox",
+      "route": "/404.html",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/about/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/work/online-auction/",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "equivalentZoom": 200,
+      "cssWidth": 640,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    },
+    {
+      "engine": "webkit",
+      "route": "/404.html",
+      "equivalentZoom": 400,
+      "cssWidth": 320,
+      "overflow": false,
+      "method": "CSS viewport reflow equivalence, not browser UI zoom"
+    }
+  ],
+  "navigation": [
+    {
+      "engine": "chromium",
+      "activation": "Tab/Enter",
+      "pass": true,
+      "unknownSlug": 404,
+      "trailingSlash": 308
+    },
+    {
+      "engine": "firefox",
+      "activation": "Tab/Enter",
+      "pass": true,
+      "unknownSlug": 404,
+      "trailingSlash": 308
+    },
+    {
+      "engine": "webkit",
+      "activation": "click",
+      "pass": true,
+      "unknownSlug": 404,
+      "trailingSlash": 308
+    }
+  ]
+}

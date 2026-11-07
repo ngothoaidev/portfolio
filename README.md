@@ -46,3 +46,14 @@ Screenshots under `docs/evidence/` record actual browser review; they are not pi
 - [Sprint 06 claim inventory and decisions](docs/sprint-06-content-audit.md)
 - [Sprint 06 implementation and verification](docs/sprint-06-storytelling.md)
 - [Owner approval inputs](docs/owner-inputs.md)
+
+
+## Production-export quality checks (Sprint 07)
+
+After `npm ci` and `npm run build`, install test engines with `npx playwright install chromium firefox webkit` (Linux CI uses `--with-deps chromium`). Run `npm run qa:a11y`, `npm run qa:browsers`, and optionally `npm run qa:lighthouse`. Each script serves `out/` on a private loopback port and shuts its server down afterward. `npm run preview:export` provides the same static host on port 3007; `PORT` overrides it. Missing URLs serve the exported page with HTTP 404, directories redirect to trailing slashes, MIME and gzip are explicit.
+
+`QA_OUTPUT` selects an evidence directory; default `docs/evidence/sprint-07/final`. Axe fails for any critical/serious violation, with raw reports compressed as `.json.gz`; full incomplete/violation data remains available. CI runs the Chromium axe gate after build and uploads reports. Responsive checks record unavailable engines and WebKit keyboard coverage explicitly; a zero script exit does not turn NOT TESTED coverage into a pass. Lighthouse is a lab measurement, not a timing gate in CI or field CWV evidence.
+
+The build adds flat RSC payload aliases when Next 16.4.5 exports nested Windows segment names. This copies payload bytes unchanged, does nothing to already-flat Linux exports and is regression tested. Local fonts use the same Fontsource Latin WOFF2 files through `next/font/local` for preload and adjusted fallback metrics.
+
+See [Sprint 07 audit](docs/sprint-07-quality-audit.md) and [draft host/manual review checklist](docs/launch-readiness.md). No deployment, origin, canonical, public sitemap or indexing permission is established by these checks.

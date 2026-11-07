@@ -1,0 +1,17 @@
+{
+  "screenReader": "Narrator",
+  "version": "10.0.26100.8972",
+  "browser": "Edge 156.0.4314.58",
+  "startup": "Launched, updates/home observed",
+  "pairing": "NOT TESTED",
+  "announcements": {
+    "landmarks": "NOT TESTED",
+    "headings": "NOT TESTED",
+    "links": "NOT TESTED",
+    "figure": "NOT TESTED"
+  },
+  "reason": "Computer Use stopped because it could not determine the current Edge URL confidently enough to enforce policy. No further native app input issued.",
+  "cleanup": "Stop-Process returned Access denied; Narrator may remain active. Owner exit instructions supplied.",
+  "nativeZoom": "NOT TESTED",
+  "viewportReflow": "200/400 percent equivalent CSS widths tested separately"
+}

@@ -1,0 +1,8 @@
+{
+  "node": "v24.18.0",
+  "npm": "11.16.0",
+  "os": "Microsoft Windows NT 10.0.26200.0",
+  "cpu": "AMD Ryzen 7 8845H w/ Radeon 780M Graphics",
+  "memoryGB": 13.81,
+  "base": "d49c251741f4f95c9ad342a75fbae7f8b3d627a5"
+}

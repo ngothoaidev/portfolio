@@ -20,6 +20,17 @@ jobs:
       - run: npm test
       - run: npm run build
       - run: npm run verify:export
+      - run: npx playwright install --with-deps chromium
+      - run: npm run qa:a11y
+        env:
+          QA_OUTPUT: artifacts/accessibility
+      - name: Save accessibility reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: accessibility-reports
+          path: artifacts/accessibility/
+          if-no-files-found: warn
       - run: npm audit --omit=dev --audit-level=moderate
       - name: Report development dependency advisories (accepted risk in docs)
         continue-on-error: true

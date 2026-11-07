@@ -1,0 +1,5 @@
+
+> editorial-portfolio@0.1.0 qa:a11y
+> node scripts/qa/accessibility.mjs
+
+axe: 10 scans; 0 violations; 0 critical/serious. Raw reports include incomplete rules for manual review.

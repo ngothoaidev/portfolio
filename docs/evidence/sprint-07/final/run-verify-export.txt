@@ -1,0 +1,9 @@
+
+> editorial-portfolio@0.1.0 verify:export
+> node scripts/verify-homepage-export.mjs && node scripts/verify-work-export.mjs && node scripts/qa/inspect-export.mjs
+
+PASS exported homepage: headings, anchor targets, section labels, approved contact, omitted claims, noindex.
+PASS work export: archive + registered MDX detail, H1, noindex, headings, evidence figure, all local links/anchors, no unknown slug export.
+PASS about export: navigation, heading hierarchy, unique IDs and unpublished channels absent.
+PASS storytelling export: real TOC/heading agreement, immutable citations, prior execution and historical results qualified.
+PASS export readiness: distinct content metadata, noindex, safe link schemes, icon, 52 files inspected; no maps, PDFs or targeted secret/draft signatures.

@@ -1,0 +1,34 @@
+[
+  {
+    "command": "npm ci",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run lint",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run typecheck",
+    "exitCode": 0
+  },
+  {
+    "command": "npm test",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run build",
+    "exitCode": 0
+  },
+  {
+    "command": "npm run verify:export",
+    "exitCode": 0
+  },
+  {
+    "command": "npm audit --omit=dev --audit-level=moderate",
+    "exitCode": 0
+  },
+  {
+    "command": "npm audit --json",
+    "exitCode": 1
+  }
+]

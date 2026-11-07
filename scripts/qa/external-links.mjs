@@ -1,0 +1,4 @@
+import {readFile,writeFile} from 'node:fs/promises';
+const links=new Set();for(const path of ['index.html','about/index.html','work/index.html','work/online-auction/index.html']) { const html=await readFile('out/'+path,'utf8'); for(const match of html.matchAll(/<a[^>]+href="(https:[^"]+)"/g)) links.add(match[1].replaceAll('&amp;','&')); }
+const results=[];const urls=[...links];for(let i=0;i<urls.length;i+=4) await Promise.all(urls.slice(i,i+4).map(async url=>{try{const response=await fetch(url,{method:'HEAD',redirect:'follow',signal:AbortSignal.timeout(20000)});results.push({url,status:response.status,finalUrl:response.url,method:'HEAD',checkedAt:new Date().toISOString()});}catch(error){results.push({url,status:'NOT VERIFIED',reason:error.message,method:'HEAD'});}}));
+await writeFile('docs/evidence/sprint-07/external-links.json',JSON.stringify(results,null,2));console.log(results.map(r=>`${r.status} ${r.url}`).join('\n'));
