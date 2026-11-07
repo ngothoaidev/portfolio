@@ -1,0 +1,970 @@
+FILE: src\mdx-components.tsx
+import type { MDXComponents } from 'mdx/types';
+import { SectionHeading } from './components/ui/typography';
+
+export function useMDXComponents(components: MDXComponents): MDXComponents {
+  return {
+    h2: (props) => <SectionHeading {...props} />,
+    h3: (props) => <SectionHeading as="h3" {...props} />,
+    ...components,
+  };
+}
+
+
+FILE: src\app\layout.tsx
+import type { Metadata } from 'next';
+import '@fontsource/instrument-serif/latin-400.css';
+import '@fontsource/instrument-serif/latin-400-italic.css';
+import '@fontsource/geist/latin-400.css';
+import '@fontsource/geist/latin-500.css';
+import '@fontsource/ibm-plex-mono/latin-400.css';
+import './globals.css';
+import { site } from '@/content/site';
+import { validateResume } from '@/content/validate-resume';
+validateResume(site);
+
+export const metadata: Metadata = {
+  title: { default: site.title, template: '%s — Portfolio' },
+  description: site.description,
+  // Keep the unfinished portfolio out of search until personal content is approved.
+  robots: { index: false, follow: false },
+};
+
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en"><body><a className="skip-link" href="#main">Skip to content</a>{children}</body></html>;
+}
+
+
+FILE: src\app\not-found.tsx
+import { Container } from '@/components/layout/container';
+import { DisplayHeading, Eyebrow } from '@/components/ui/typography';
+import { TextLink } from '@/components/ui/text-link';
+
+export default function NotFound() {
+  return (
+    <Container as="main" id="main" tabIndex={-1} className="not-found">
+      <Eyebrow>404 / Page not found</Eyebrow>
+      <DisplayHeading>A missing page.</DisplayHeading>
+      <p>This address does not lead to a page in this portfolio.</p>
+      <TextLink href="/" arrow="↗">Return to the portfolio</TextLink>
+    </Container>
+  );
+}
+
+
+FILE: src\app\page.tsx
+import { SiteShell } from '@/components/layout/site-shell';
+import { Hero } from '@/components/sections/hero';
+import { SelectedWork } from '@/components/sections/selected-work';
+import { EngineeringExpertise } from '@/components/sections/engineering-expertise';
+import { Contact } from '@/components/sections/contact';
+import Introduction from '@/content/introduction.mdx';
+import { projects } from '@/content/project-catalog';
+import { expertise } from '@/content/expertise';
+import { site } from '@/content/site';
+
+export default function Home() {
+  return (
+    <SiteShell>
+      <Hero />
+      <SelectedWork projects={projects} />
+      <EngineeringExpertise areas={expertise} introduction={<Introduction />} />
+      <Contact profile={site} />
+    </SiteShell>
+  );
+}
+
+
+FILE: src\app\about\page.tsx
+import type { Metadata } from 'next';
+import { SiteShell } from '@/components/layout/site-shell';
+import { DisplayHeading, Eyebrow, SectionHeading } from '@/components/ui/typography';
+import { TextLink } from '@/components/ui/text-link';
+import { ExperienceList } from '@/components/about/experience-list';
+import { expertise, getVerifiedExpertise } from '@/content/expertise';
+import { profile, publishedText, experiences } from '@/content/profile';
+import { getContactLinks, site } from '@/content/site';
+export const metadata: Metadata = { title: 'About', description: 'Engineering focus across frontend interfaces, backend systems, and AI-assisted workflows. Explore the work and its supporting evidence.' };
+export default function AboutPage() {
+  const name = publishedText(profile.name);
+  const bio = publishedText(profile.bio);
+  const links = getContactLinks(site);
+  return <SiteShell>
+    <header className="about-opening editorial-grid">
+      <Eyebrow className="hero-meta">About / Engineering focus</Eyebrow>
+      <div className="hero-body">
+        <DisplayHeading>Interfaces.<br />Systems.<br /><em className="accent">The connections between.</em></DisplayHeading>
+        <div className="prose">{name && <p>{name}</p>}<p>{bio ?? site.introduction}</p></div>
+        <TextLink href="/work/" arrow="↗">Explore the work</TextLink>
+      </div>
+    </header>
+    <section className="about-focus" aria-labelledby="focus-heading">
+      <Eyebrow>01 / Engineering focus</Eyebrow>
+      <SectionHeading id="focus-heading">Three connected disciplines.</SectionHeading>
+      <ul className="about-focus-grid">{getVerifiedExpertise(expertise).map(area => <li key={area.id}>
+        <SectionHeading as="h3">{area.title}</SectionHeading><p>{area.summary}</p>
+        <p className="eyebrow">{area.technologies.join(' / ')}</p>
+      </li>)}</ul>
+    </section>
+    <section className="content-section editorial-grid" aria-labelledby="approach-heading">
+      <Eyebrow className="section-label">02 / Read the work</Eyebrow>
+      <div className="section-body"><SectionHeading id="approach-heading">Decisions, with context.</SectionHeading>
+        <div className="prose"><p>The case studies connect technical decisions to source evidence, verification, and limitations. Start with Online-Auction for a closer look at transaction boundaries, proxy bidding, and event delivery.</p></div>
+        <TextLink href="/work/online-auction/" arrow="↗">Read the Online-Auction case study</TextLink>
+      </div>
+    </section>
+    <ExperienceList entries={experiences} />
+    {links.length > 0 && <section className="content-section editorial-grid" aria-labelledby="about-contact-heading">
+      <Eyebrow className="section-label">Continue the conversation</Eyebrow>
+      <div className="section-body"><SectionHeading id="about-contact-heading">Take a closer look.</SectionHeading>
+        <p className="contact-introduction">Explore the source and connect through the published profile.</p>
+        <ul className="contact-links">{links.map(link => <li key={link.href}><TextLink href={link.href} arrow="↗">{link.label}</TextLink></li>)}</ul>
+      </div>
+    </section>}
+  </SiteShell>;
+}
+
+
+FILE: src\app\work\page.tsx
+import type { Metadata } from 'next';
+import { SiteShell } from '@/components/layout/site-shell';
+import { WorkArchive } from '@/components/work/work-archive';
+import { projects } from '@/content/project-catalog';
+
+export const metadata: Metadata = { title: 'Work', description: 'Engineering case studies with source evidence, technical decisions, and explicit limitations.' };
+export default function WorkPage() {
+  return <SiteShell><WorkArchive projects={projects} /></SiteShell>;
+}
+
+
+FILE: src\app\work\[slug]\page.tsx
+import { caseStudySections } from '@/content/online-auction-evidence';
+import type { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { SiteShell } from '@/components/layout/site-shell';
+import { CaseStudyHeader, CaseStudyTOC } from '@/components/case-study/elements';
+import { projects } from '@/content/project-catalog';
+import { findCaseStudy, getCaseStudyProjects } from '@/content/case-study-index';
+import { projectCaseStudies } from '@/content/project-case-studies';
+
+export const dynamicParams = false;
+export function generateStaticParams() {
+  return getCaseStudyProjects(projects).map(({ slug }) => ({ slug }));
+}
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const project = findCaseStudy(projects, (await params).slug);
+  if (!project) notFound();
+  return { title: project.title, description: project.summary };
+}
+export default async function CaseStudyPage({ params }: { params: Promise<{ slug: string }> }) {
+  const project = findCaseStudy(projects, (await params).slug);
+  if (!project) notFound();
+  const Content = projectCaseStudies[project.slug];
+  if (!Content) notFound();
+  return <SiteShell><article className="case-study"><CaseStudyHeader project={project} /><div className="case-layout"><CaseStudyTOC sections={caseStudySections} /><div className="case-prose"><Content /></div></div></article></SiteShell>;
+}
+
+
+FILE: src\components\about\experience-list.tsx
+import { getApprovedExperience, type ExperienceEntry } from '../../content/profile';
+
+import { SectionHeading } from '../ui/typography';
+
+import { TextLink } from '../ui/text-link';
+
+function month(value: string) {
+
+  const [year, month] = value.split('-').map(Number);
+
+  return new Intl.DateTimeFormat('en', { month: 'short', year: 'numeric', timeZone: 'UTC' }).format(new Date(Date.UTC(year, month - 1, 1)));
+
+}
+
+export function ExperienceList({ entries }: { entries: readonly ExperienceEntry[] }) {
+
+  const approved = getApprovedExperience(entries);
+
+  if (!approved.length) return null;
+
+  return <section className="about-experience" aria-labelledby="experience-heading" id="experience">
+
+    <SectionHeading id="experience-heading">Experience</SectionHeading>
+
+    <ol className="experience-list">{approved.map(entry => <li key={entry.id}>
+
+      <SectionHeading as="h3">{entry.role} · {entry.organization}</SectionHeading>
+
+      <p className="experience-period"><time dateTime={entry.startDate}>{month(entry.startDate)}</time> – {entry.endDate === 'present' ? 'Present' : <time dateTime={entry.endDate}>{month(entry.endDate)}</time>}{entry.location && <> · {entry.location}</>}</p>
+
+      <p>{entry.summary}</p>
+
+      {entry.contributions.length > 0 && <ul>{entry.contributions.map(item => <li key={item}>{item}</li>)}</ul>}
+
+      {entry.technologies.length > 0 && <p>{entry.technologies.join(' · ')}</p>}
+
+      {entry.evidence?.map(link => <TextLink key={link.url} href={link.url}>{link.label}</TextLink>)}
+
+    </li>)}</ol>
+
+  </section>;
+
+}
+
+
+
+FILE: src\components\case-study\elements.tsx
+import Image from 'next/image';
+import type { ReactNode } from 'react';
+import type { Project } from '../../content/projects';
+import { auctionSource } from '../../content/online-auction-evidence';
+import { DisplayHeading, Eyebrow } from '../ui/typography';
+import { TextLink } from '../ui/text-link';
+
+export function CaseStudyHeader({ project }: { project: Project }) {
+  return <header className="case-header">
+    <TextLink href="/work/">Back to work</TextLink>
+    <Eyebrow>Engineering case study / {project.developmentStatus.replace('-', ' ')}</Eyebrow>
+    <DisplayHeading>{project.title}</DisplayHeading>
+    <p>{project.summary}</p>
+    <dl className="case-meta"><dt>Scope</dt><dd>{project.role}</dd><dt>Stack</dt><dd>{project.technologies.join(' / ')}</dd></dl>
+    <ul className="project-links" aria-label="Project evidence">{project.links.map((link) => <li key={link.url}><TextLink href={link.url}>{link.label}</TextLink></li>)}</ul>
+  </header>;
+}
+export function CaseStudyTOC({ sections }: { sections: readonly (readonly [string, string])[] }) {
+  return <nav className="case-toc" aria-label="Case study contents"><Eyebrow>In this study</Eyebrow><ol>{sections.map(([id, label]) => <li key={id}><a href={`#${id}`}>{label}</a></li>)}</ol></nav>;
+}
+export function SourceLink({ path, children }: { path: string; children: ReactNode }) {
+  return <a href={auctionSource + path}>{children}</a>;
+}
+export function EvidenceFigure({ src, alt, caption, width, height }: { src: string; alt: string; caption: string; width: number; height: number }) {
+  return <figure className="evidence-figure"><div className="figure-media" role="region" aria-label={alt} tabIndex={0}><Image src={src} alt={alt} width={width} height={height} unoptimized /></div><figcaption>{caption}</figcaption></figure>;
+}
+export function DecisionBlock({ title, approach, tradeOff }: { title: string; approach: string; tradeOff: string }) {
+  return <aside className="decision-block"><h3>{title}</h3><dl><dt>Approach</dt><dd>{approach}</dd><dt>Trade-off</dt><dd>{tradeOff}</dd></dl></aside>;
+}
+
+
+FILE: src\components\layout\container.tsx
+import type { HTMLAttributes } from 'react';
+
+export function Container({ as: Tag = 'div', className = '', ...props }: HTMLAttributes<HTMLElement> & { as?: 'div' | 'main' }) {
+  return <Tag className={`container ${className}`.trim()} {...props} />;
+}
+
+
+FILE: src\components\layout\section.tsx
+import type { ReactNode } from 'react';
+import { Eyebrow } from '../ui/typography';
+
+type SectionProps = {
+  id: string;
+  headingId: string;
+  label: string;
+  children: ReactNode;
+};
+
+// Shares the label/content grid; the caller owns the visible heading and its ID.
+export function Section({ id, headingId, label, children }: SectionProps) {
+  return (
+    <section id={id} className="content-section editorial-grid" aria-labelledby={headingId}>
+      <Eyebrow className="section-label">{label}</Eyebrow>
+      <div className="section-body">{children}</div>
+    </section>
+  );
+}
+
+
+FILE: src\components\layout\site-footer.tsx
+import { site } from '../../content/site';
+import { Eyebrow } from '../ui/typography';
+
+export function SiteFooter() {
+  return (
+    <footer className="site-footer">
+      <p>{site.role}</p>
+      <Eyebrow>Interfaces / APIs / Systems</Eyebrow>
+    </footer>
+  );
+}
+
+
+FILE: src\components\layout\site-header.tsx
+import Link from 'next/link';
+import { getContactLinks, site } from '../../content/site';
+import { expertise, getVerifiedExpertise } from '../../content/expertise';
+
+export function SiteHeader() {
+  return (
+    <header className="site-header">
+      <Link href="/" className="wordmark" aria-label="Portfolio home">
+        Portfolio<span aria-hidden="true">.</span>
+      </Link>
+      <nav aria-label="Main navigation" className="site-nav">
+        <Link href="/about/">About</Link>
+        <Link href="/work/">Work</Link>
+        {getVerifiedExpertise(expertise).length > 0 && <Link href="/#expertise">Expertise</Link>}
+        {getContactLinks(site).length > 0 && <Link href="/#contact">Contact</Link>}
+      </nav>
+    </header>
+  );
+}
+
+
+FILE: src\components\layout\site-shell.tsx
+import type { ReactNode } from 'react';
+import { Container } from './container';
+import { SiteHeader } from './site-header';
+import { SiteFooter } from './site-footer';
+
+export function SiteShell({ children }: { children: ReactNode }) {
+  return (
+    <Container>
+      <SiteHeader />
+      <main id="main" tabIndex={-1}>{children}</main>
+      <SiteFooter />
+    </Container>
+  );
+}
+
+
+FILE: src\components\sections\contact.tsx
+import { getContactLinks, type SiteProfile } from '../../content/site';
+import { Section } from '../layout/section';
+import { SectionHeading } from '../ui/typography';
+import { TextLink } from '../ui/text-link';
+
+export function Contact({ profile }: { profile: SiteProfile }) {
+  const links = getContactLinks(profile);
+  if (links.length === 0) return null;
+  return (
+    <Section id="contact" headingId="contact-heading" label="03 / Get in touch">
+      <SectionHeading id="contact-heading">Continue the conversation.</SectionHeading>
+      <p className="contact-introduction">Find me through the links below.</p>
+      <ul className="contact-links" aria-label="Contact and profiles">
+        {links.map((link) => (
+          <li key={link.href}><TextLink href={link.href} arrow="↗">{link.label}</TextLink></li>
+        ))}
+      </ul>
+    </Section>
+  );
+}
+
+
+FILE: src\components\sections\engineering-expertise.tsx
+import type { ReactNode } from 'react';
+import { getVerifiedExpertise, type ExpertiseArea } from '../../content/expertise';
+import { Section } from '../layout/section';
+import { SectionHeading, Eyebrow } from '../ui/typography';
+import { TechTag } from '../ui/tech-tag';
+
+type ExpertiseProps = { areas: readonly ExpertiseArea[]; introduction: ReactNode };
+
+export function EngineeringExpertise({ areas, introduction }: ExpertiseProps) {
+  const verified = getVerifiedExpertise(areas);
+  if (verified.length === 0) return null;
+  return (
+    <Section id="expertise" headingId="expertise-heading" label="02 / Engineering focus">
+      <SectionHeading id="expertise-heading">Across the stack.</SectionHeading>
+      <div className="prose expertise-introduction">{introduction}</div>
+      <ol className="expertise-list">
+        {verified.map((area, index) => (
+          <li key={area.id} className="expertise-area">
+            <Eyebrow as="span" className="expertise-index" aria-hidden="true">{String(index + 1).padStart(2, '0')}</Eyebrow>
+            <div>
+              <SectionHeading as="h3">{area.title}</SectionHeading>
+              <p>{area.summary}</p>
+              <ul className="technology-list" aria-label={`${area.title} technologies`}>
+                {area.technologies.map((technology) => <li key={technology}><TechTag>{technology}</TechTag></li>)}
+              </ul>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </Section>
+  );
+}
+
+
+FILE: src\components\sections\hero.tsx
+import { getContactLinks, site } from '../../content/site';
+import { DisplayHeading, Eyebrow } from '../ui/typography';
+import { TextLink } from '../ui/text-link';
+
+export function Hero() {
+  const hasContact = getContactLinks(site).length > 0;
+  return (
+    <section className="hero editorial-grid" aria-labelledby="hero-heading">
+      <div className="hero-meta">
+        <Eyebrow>{site.name ?? 'Software engineering'}</Eyebrow>
+        <p className="meta-note">Interfaces / APIs / Systems</p>
+      </div>
+      <div className="hero-body">
+        <DisplayHeading id="hero-heading">
+          Full-stack<br /><em>Software</em><br />Engineer<span className="accent">.</span>
+        </DisplayHeading>
+        <div className="hero-bottom">
+          <p className="hero-introduction">{site.introduction}</p>
+          <div className="hero-actions">
+            <TextLink href="#work" arrow="↘">View selected work</TextLink>
+            {hasContact && <TextLink href="#contact">Get in touch</TextLink>}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+FILE: src\components\sections\selected-work.tsx
+import { TextLink } from '../ui/text-link';
+import { getPublishedProjects, type Project } from '../../content/projects';
+import { ProjectCard } from '../work/project-card';
+import { Section } from '../layout/section';
+import { Eyebrow, SectionHeading } from '../ui/typography';
+
+export function SelectedWork({ projects }: { projects: readonly Project[] }) {
+  const published = getPublishedProjects(projects);
+  return (
+    <Section id="work" headingId="work-heading" label="01 / Selected work">
+      <div className="section-heading">
+        <SectionHeading id="work-heading">Work, in detail.</SectionHeading>
+        <Eyebrow as="span">{String(published.length).padStart(2, '0')} published</Eyebrow>
+        <TextLink href="/work/">All work</TextLink>
+      </div>
+      {published.length > 0 ? (
+        <ul className="project-list">
+          {published.map((project, index) => <li key={project.slug}><ProjectCard project={project} prominent={index === 0 && project.featured} /></li>)}
+        </ul>
+      ) : (
+        <div className="empty-work">
+          <span className="empty-mark" aria-hidden="true">↗</span>
+          <div>
+            <h3>Case studies are on the way.</h3>
+            <p>Projects will appear here with context, implementation details, and evidence of the work.</p>
+          </div>
+        </div>
+      )}
+    </Section>
+  );
+}
+
+
+FILE: src\components\ui\tech-tag.tsx
+export function TechTag({ children }: { children: string }) {
+  return <span className="tech-tag">{children}</span>;
+}
+
+
+FILE: src\components\ui\text-link.tsx
+import type { ComponentPropsWithoutRef, ReactNode } from 'react';
+
+type TextLinkProps = Omit<ComponentPropsWithoutRef<'a'>, 'href'> & {
+  href: string;
+  arrow?: ReactNode;
+};
+
+export function TextLink({ children, className = '', arrow, ...props }: TextLinkProps) {
+  return (
+    <a className={`text-link ${className}`.trim()} {...props}>
+      <span>{children}</span>
+      {arrow && <span className="link-arrow" aria-hidden="true">{arrow}</span>}
+    </a>
+  );
+}
+
+
+FILE: src\components\ui\typography.tsx
+import type { ComponentPropsWithoutRef } from 'react';
+
+type HeadingProps = ComponentPropsWithoutRef<'h2'>;
+
+// Display always owns the page H1; section/card semantics are explicit at call sites.
+export function DisplayHeading({ className = '', ...props }: ComponentPropsWithoutRef<'h1'>) {
+  return <h1 className={`display-heading ${className}`.trim()} {...props} />;
+}
+
+export function SectionHeading({ as: Tag = 'h2', className = '', ...props }: HeadingProps & { as?: 'h2' | 'h3' }) {
+  const recipe = Tag === 'h3' ? 'card-title' : 'section-title';
+  return <Tag className={`${recipe} ${className}`.trim()} {...props} />;
+}
+
+export function Eyebrow({ as: Tag = 'p', className = '', ...props }: ComponentPropsWithoutRef<'p'> & { as?: 'p' | 'span' }) {
+  return <Tag className={`eyebrow ${className}`.trim()} {...props} />;
+}
+
+
+FILE: src\components\work\project-card.tsx
+import { getCaseStudyHref } from '../../content/case-study-index';
+import Image from 'next/image';
+import type { Project } from '../../content/projects';
+import { Eyebrow, SectionHeading } from '../ui/typography';
+import { TextLink } from '../ui/text-link';
+import { TechTag } from '../ui/tech-tag';
+
+const statusLabels = { 'in-progress': 'In progress', completed: 'Completed', archived: 'Archived' };
+
+export function ProjectCard({ project, prominent = false, headingLevel = 'h3' }: { project: Project; prominent?: boolean; headingLevel?: 'h2' | 'h3' }) {
+  const caseStudyHref = getCaseStudyHref(project);
+  return (
+    <article className={`project-card${prominent ? ' project-card-featured' : ''}`} aria-labelledby={`project-${project.slug}`}>
+      {project.cover && (
+        <Image className="project-cover" src={project.cover.src} alt={project.cover.alt}
+          width={project.cover.width} height={project.cover.height} unoptimized />
+      )}
+      <Eyebrow className="project-meta">
+        {project.featured && <span>Featured</span>}
+        <span>{statusLabels[project.developmentStatus]}</span>
+      </Eyebrow>
+      <SectionHeading as={headingLevel} id={`project-${project.slug}`}>{project.title}</SectionHeading>
+      <p>{project.summary}</p>
+      {caseStudyHref && <TextLink href={caseStudyHref}>Read {project.title} case study</TextLink>}
+      <p>Scope: {project.role}</p>
+      <ul className="technology-list" aria-label="Technologies">
+        {project.technologies.map((technology) => <li key={technology}><TechTag>{technology}</TechTag></li>)}
+      </ul>
+      {project.links.length > 0 && (
+        <ul className="project-links" aria-label={`${project.title} links`}>
+          {project.links.map((link) => (
+            <li key={link.url}>
+              <TextLink href={link.url} arrow="↗">
+                {link.label}<span className="sr-only"> for {project.title}</span>
+              </TextLink>
+            </li>
+          ))}
+        </ul>
+      )}
+    </article>
+  );
+}
+
+
+FILE: src\components\work\work-archive.tsx
+import type { Project } from '../../content/projects';
+import { getPublishedProjects } from '../../content/projects';
+import { DisplayHeading, Eyebrow } from '../ui/typography';
+import { ProjectCard } from './project-card';
+
+export function WorkArchive({ projects }: { projects: readonly Project[] }) {
+  const published = getPublishedProjects(projects);
+  return (
+    <div className="work-page editorial-grid">
+      <Eyebrow className="section-label">Work / Engineering studies</Eyebrow>
+      <div className="section-body">
+        <DisplayHeading>Work, in context.</DisplayHeading>
+        <p className="archive-introduction">Systems, decisions, and the evidence behind them.</p>
+        <Eyebrow>{String(published.length).padStart(2, '0')} published</Eyebrow>
+        {published.length ? <ul className="project-list">{published.map((project, index) => <li key={project.slug}><ProjectCard headingLevel="h2" project={project} prominent={index === 0 && project.featured} /></li>)}</ul>
+          : <p className="archive-empty">No case studies have been published yet.</p>}
+      </div>
+    </div>
+  );
+}
+
+
+FILE: src\content\case-study-index.ts
+import { getPublishedProjects, type Project } from './projects';
+
+// Finite allowlist shared by selectors, validation, cards and the MDX module registry.
+export const caseStudyIndex: Readonly<Record<string, { contentPath: string }>> = {
+  'online-auction': { contentPath: 'content/projects/online-auction.mdx' },
+};
+
+export function getCaseStudyHref(project: Project): string | null {
+  const entry = Object.hasOwn(caseStudyIndex, project.slug) ? caseStudyIndex[project.slug] : undefined;
+  return project.publicationStatus === 'published' && entry && project.caseStudy?.contentPath === entry.contentPath
+    ? `/work/${project.slug}/` : null;
+}
+export function getCaseStudyProjects(records: readonly Project[]): readonly Project[] {
+  return getPublishedProjects(records).filter((project) => getCaseStudyHref(project) !== null);
+}
+export function findCaseStudy(records: readonly Project[], slug: string): Project | undefined {
+  return getCaseStudyProjects(records).find((project) => project.slug === slug);
+}
+
+
+FILE: src\content\expertise.ts
+export type ExpertiseArea = {
+  id: string;
+  title: string;
+  summary: string;
+  technologies: readonly string[];
+  verifiedOn: `${number}-${number}-${number}` | null;
+};
+
+// Owner explicitly confirmed these three areas in the Sprint 03 conversation.
+// This confirmation does not establish employment, seniority, metrics or project completion.
+export const expertise: readonly ExpertiseArea[] = [
+  {
+    id: 'frontend', title: 'Frontend Engineering',
+    summary: 'Work involving React, component design, responsive layouts, and accessible interfaces.',
+    technologies: ['React', 'TypeScript', 'Accessible UI'], verifiedOn: '2026-11-08',
+  },
+  {
+    id: 'backend', title: 'Backend & Systems',
+    summary: 'Experience with Node.js APIs and PostgreSQL, with attention to data boundaries and testing.',
+    technologies: ['Node.js', 'APIs', 'PostgreSQL'], verifiedOn: '2026-11-08',
+  },
+  {
+    id: 'ai-infrastructure', title: 'AI & Infrastructure',
+    summary: 'Work involving LLM-assisted workflows, Docker, and automation supporting development and delivery.',
+    technologies: ['LLM workflows', 'Docker', 'Automation'], verifiedOn: '2026-11-08',
+  },
+];
+
+export function getVerifiedExpertise(areas: readonly ExpertiseArea[]): readonly ExpertiseArea[] {
+  return areas.filter((area) => area.verifiedOn !== null);
+}
+
+
+FILE: src\content\online-auction-evidence.ts
+export const auctionRevision = '303ae3348c8456fc4b5f83fe850b2b14db80a688';
+export const auctionSource = `https://github.com/ngothoaidev/Online-Auction/blob/${auctionRevision}/`;
+export const caseStudySections = [
+  ['overview', 'Overview'], ['problem', 'Problem'], ['constraints', 'Constraints'],
+  ['architecture', 'Architecture'], ['decisions', 'Engineering decisions'],
+  ['implementation', 'Implementation'], ['verification', 'Verification'],
+  ['outcomes', 'Outcomes'], ['limitations', 'Limitations & reflection'],
+] as const;
+
+
+FILE: src\content\profile.ts
+export type Approved<T> = { value: T; publicationStatus: 'draft' | 'approved'; approval: string };
+export type Profile = { name: Approved<string> | null; bio: Approved<string> | null };
+export const profile: Profile = { name: null, bio: null };
+export function publishedText(record: Approved<string> | null): string | null {
+  return record?.publicationStatus === 'approved' && record.approval.trim() && record.value.trim() ? record.value : null;
+}
+export type ExperienceEntry = {
+  id: string; organization: string; role: string; startDate: string; endDate: string | 'present';
+  location?: string; summary: string; contributions: readonly string[]; technologies: readonly string[];
+  evidence?: readonly { label: string; url: string }[];
+  publicationStatus: 'draft' | 'approved'; approval: string;
+};
+export const experiences: readonly ExperienceEntry[] = [];
+function validMonth(value: string) { return /^\d{4}-(0[1-9]|1[0-2])$/.test(value); }
+export function getApprovedExperience(records: readonly ExperienceEntry[]): readonly ExperienceEntry[] {
+  const ids = new Set<string>();
+  return records.filter(record => record.publicationStatus === 'approved').map(record => {
+    if (ids.has(record.id) || ![record.id, record.organization, record.role, record.summary, record.approval, ...record.contributions, ...record.technologies].every(value => value.trim())) throw new Error('Invalid experience text or duplicate ID');
+    ids.add(record.id);
+    if (!validMonth(record.startDate) || (record.endDate !== 'present' && (!validMonth(record.endDate) || record.endDate < record.startDate))) throw new Error('Invalid experience dates');
+    for (const link of record.evidence ?? []) {
+      const url = new URL(link.url);
+      if (url.protocol !== 'https:' || url.username || url.password || !link.label.trim()) throw new Error('Invalid experience evidence');
+    }
+    return record;
+  }).sort((a,b) => b.startDate.localeCompare(a.startDate));
+}
+
+
+FILE: src\content\project-case-studies.ts
+import { caseStudyIndex } from './case-study-index';
+import OnlineAuction from '../../content/projects/online-auction.mdx';
+import type { ComponentType } from 'react';
+
+// Only trusted, statically imported repository MDX. No user-controlled import paths.
+export const projectCaseStudies: Readonly<Record<string, ComponentType>> = {
+  'online-auction': OnlineAuction,
+};
+
+for (const slug of Object.keys(caseStudyIndex)) {
+  if (!Object.hasOwn(projectCaseStudies, slug)) throw new Error(`Missing MDX import: ${slug}`);
+}
+
+
+FILE: src\content\project-catalog.ts
+import { projects } from './projects';
+import { validateProjects } from './validate-projects';
+
+validateProjects(projects);
+export { projects };
+
+
+FILE: src\content\projects.ts
+export type VerifiedProjectLink = {
+  label: string;
+  url: `https://${string}`;
+  kind: 'source' | 'demo' | 'reference';
+  verifiedOn: `${number}-${number}-${number}`;
+};
+
+export type Project = {
+  slug: string;
+  title: string;
+  summary: string;
+  role: string;
+  technologies: readonly string[];
+  publicationStatus: 'draft' | 'published';
+  developmentStatus: 'in-progress' | 'completed' | 'archived';
+  featured: boolean;
+  links: readonly VerifiedProjectLink[];
+  cover?: { src: `/${string}`; alt: string; width: number; height: number };
+  // A reference to an authored MDX file, not an assertion that a route exists.
+  caseStudy?: { contentPath: `content/projects/${string}.mdx` };
+};
+
+export function getPublishedProjects(records: readonly Project[]): readonly Project[] {
+  return records.filter((project) => project.publicationStatus === 'published')
+    .sort((a, b) => Number(b.featured) - Number(a.featured));
+}
+
+// Only owner-verified records belong here. Test fixtures are never imported by the site.
+export const projects: readonly Project[] = [{
+  slug: 'online-auction',
+  title: 'Online-Auction',
+  summary: 'A source-audited study of proxy bidding, transaction boundaries, worker settlement, and at-least-once event delivery.',
+  role: 'Source analysis; individual contribution scope is not asserted.',
+  technologies: ['React', 'Express', 'PostgreSQL', 'Drizzle', 'SSE'],
+  publicationStatus: 'published',
+  developmentStatus: 'in-progress',
+  featured: true,
+  links: [
+    { label: 'Audited source', url: 'https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688', kind: 'source', verifiedOn: '2026-11-08' },
+    { label: 'Demo (may cold-start)', url: 'https://online-auction-1-a3t4.onrender.com/', kind: 'demo', verifiedOn: '2026-11-08' },
+  ],
+  caseStudy: { contentPath: 'content/projects/online-auction.mdx' },
+}];
+
+
+FILE: src\content\site.ts
+export type SiteProfile = {
+  title: string;
+  description: string;
+  role: 'Full-stack Software Engineer';
+  name: string | null;
+  introduction: string;
+  email: string | null;
+  githubUrl: `https://${string}` | null;
+  linkedinUrl: `https://${string}` | null;
+  resumePath: `/${string}` | null;
+  contactApprovals?: Partial<Record<'email' | 'githubUrl' | 'linkedinUrl' | 'resumePath', string>>;
+  resumePrivacyReviewed?: boolean;
+};
+
+export const site: SiteProfile = {
+  title: 'Portfolio — Full-stack Software Engineer',
+  description: 'Full-stack software engineering: frontend interfaces, backend APIs, and AI-assisted workflows. Explore engineering focus areas and selected work.',
+  role: 'Full-stack Software Engineer',
+  name: null,
+  introduction: 'Frontend interfaces and the systems behind them. Work involving React, Node.js, and PostgreSQL, supported by AI-assisted workflows and automation.',
+  email: null,
+  // Owner approved publication on 2026-11-08; profile existence checked via GitHub API.
+  githubUrl: 'https://github.com/ngothoaidev',
+  linkedinUrl: null,
+  resumePath: null,
+  contactApprovals: { githubUrl: 'Owner publication approval, Sprint 03, 2026-11-08' },
+};
+
+export type ContactLink = { label: string; href: string };
+
+// Local data is reviewed before publication. Unknown destinations stay null.
+export function getContactLinks(profile: SiteProfile): readonly ContactLink[] {
+  const links: ContactLink[] = [];
+  if (profile.email && profile.contactApprovals?.email?.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)) links.push({ label: 'Email', href: `mailto:${profile.email}` });
+  if (profile.githubUrl && profile.contactApprovals?.githubUrl?.trim() && validProfileUrl(profile.githubUrl, 'github.com')) links.push({ label: 'GitHub', href: profile.githubUrl });
+  if (profile.linkedinUrl && profile.contactApprovals?.linkedinUrl?.trim() && validProfileUrl(profile.linkedinUrl, 'www.linkedin.com')) links.push({ label: 'LinkedIn', href: profile.linkedinUrl });
+  if (profile.resumePath && profile.contactApprovals?.resumePath?.trim() && profile.resumePrivacyReviewed && validResumePath(profile.resumePath)) links.push({ label: 'Resume (PDF)', href: profile.resumePath });
+  return links;
+}
+
+export function validResumePath(path: string): boolean {
+  return /^\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.pdf$/.test(path);
+}
+function validProfileUrl(value: string, host: string): boolean {
+  try { const url = new URL(value); return url.protocol === 'https:' && url.hostname === host && !url.username && !url.password && !url.port; } catch { return false; }
+}
+
+
+FILE: src\content\validate-projects.ts
+import { existsSync } from 'node:fs';
+import { resolve, sep } from 'node:path';
+import { caseStudyIndex } from './case-study-index';
+import type { Project } from './projects';
+
+export function validateProjects(records: readonly Project[], root = process.cwd()): void {
+  const seen = new Set<string>();
+  for (const project of records) {
+    if (seen.has(project.slug)) throw new Error(`Duplicate project slug: ${project.slug}`);
+    seen.add(project.slug);
+    if (project.publicationStatus !== 'published') continue;
+    if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project.slug)) throw new Error('Invalid project slug');
+    for (const value of [project.title, project.summary, project.role]) {
+      if (!value.trim()) throw new Error(`Missing published metadata: ${project.slug}`);
+    }
+    if (!project.technologies.length || project.technologies.some((value) => !value.trim())) throw new Error('Missing technologies');
+    for (const link of project.links) {
+      const url = new URL(link.url);
+      if (url.protocol !== 'https:' || !url.hostname || url.username || url.password || !link.label.trim()) throw new Error('Invalid evidence URL');
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(link.verifiedOn) || !Number.isFinite(Date.parse(link.verifiedOn)) || new Date(link.verifiedOn).toISOString().slice(0, 10) !== link.verifiedOn) throw new Error('Invalid verification date');
+    }
+    if (project.cover) {
+      const publicRoot = resolve(root, 'public');
+      const asset = resolve(publicRoot, `.${project.cover.src}`);
+      if (!project.cover.src.startsWith('/') || project.cover.src.startsWith('//') || !asset.startsWith(publicRoot + sep) || !existsSync(asset) || !project.cover.alt.trim() || project.cover.width <= 0 || project.cover.height <= 0) throw new Error('Invalid or missing cover asset');
+    }
+    if (project.caseStudy) {
+      const entry = Object.hasOwn(caseStudyIndex, project.slug) ? caseStudyIndex[project.slug] : undefined;
+      if (!entry || entry.contentPath !== project.caseStudy.contentPath || !existsSync(resolve(root, entry.contentPath))) throw new Error('Missing registered case study');
+    }
+  }
+}
+
+
+FILE: src\content\validate-resume.ts
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+import { getContactLinks, type SiteProfile } from './site';
+export function validateResume(profile: SiteProfile, publicRoot = resolve('public')) {
+  if (!profile.resumePath) return;
+  if (!getContactLinks(profile).some(link => link.href === profile.resumePath)) throw new Error('Resume requires publication approval, privacy review and a safe local PDF path');
+  const pdf = readFileSync(resolve(publicRoot, profile.resumePath.slice(1)));
+  if (pdf.subarray(0, 5).toString() !== '%PDF-' || !pdf.toString('latin1').includes('%%EOF')) throw new Error('Resume must be a valid reviewed PDF');
+}
+
+
+FILE: src\content\introduction.mdx
+Frontend and backend engineering form the core of my work. AI-assisted workflows,
+containers, and automation support how that work gets built and delivered.
+
+
+FILE: content\projects\online-auction.mdx
+import { DecisionBlock, EvidenceFigure, SourceLink } from '@/components/case-study/elements';
+
+<h2 id="overview">Overview</h2>
+
+Online-Auction is a React/Vite auction application backed by an Express API,
+PostgreSQL and a separate worker. This study examines the implementation on
+`feature/auction-upgrade` at commit `303ae3348c8456fc4b5f83fe850b2b14db80a688`.
+It is a source-audited engineering study, not a claim of sole personal authorship
+or a completed production service.
+
+The focus is the boundary between an interactive bid and durable business state:
+what happens when requests race, clients retry, or a process stops after a write.
+<SourceLink path="docs/architecture.md">Architecture source</SourceLink>.
+
+<h2 id="problem">Problem</h2>
+
+A bid is not just a new number on a page. Two requests can read the same price,
+a deadline can pass while a request waits, and a buyer can retry after losing the
+response. Auctions also need to close when nobody is viewing them. The implementation
+puts these decisions behind shared transaction boundaries rather than relying on
+browser timing or read-triggered settlement.
+
+<h2 id="constraints">Constraints</h2>
+
+- A bidder's private maximum must stay separate from public price history.
+- Deadline decisions must use a consistent clock after contention is resolved.
+- Retried keyed commands must not repeat their business effect.
+- Notifications must follow committed state; consumers must tolerate redelivery.
+- Payments are manual proof or a mock gateway. No real money processing is established.
+
+These are implemented policies and boundaries, not claims of unlimited reliability.
+<SourceLink path="docs/adr/0002-architecture-decisions.md">Technical decisions and alternatives</SourceLink>.
+
+<h2 id="architecture">Architecture</h2>
+
+The SPA sends HTTP commands and listens to Server-Sent Events. Express executes
+commands against PostgreSQL through Drizzle. The worker separately handles timed
+settlement and event dispatch. State and outbox events share the database; external
+effects are outside the business transaction.
+
+<EvidenceFigure src="/work/online-auction-architecture.svg" width={256} height={560}
+  alt="React SPA sends HTTP commands to Express; Express and a separate worker share PostgreSQL; committed events feed SSE and notifications."
+  caption="Source-derived architecture diagram, authored for this study. It is not a product screenshot. Based on architecture.md, auctionCommands.js, worker.js and realtime.js at the audited revision." />
+
+SSE reads committed public event payloads by auction version. A cursor supports
+replay; gaps can reset the client to a fresh snapshot. The source does not establish
+measured multi-instance capacity.
+<SourceLink path="backend/services/realtime.js">SSE implementation</SourceLink>.
+
+<h2 id="decisions">Key engineering decisions</h2>
+
+<DecisionBlock title="Serialize one auction, not every auction"
+  approach="A command locks the auction row, then evaluates clock_timestamp() and the proxy-bidding rules inside the same transaction."
+  tradeOff="A hot lot is serialized, limiting its throughput. The benefit is a clear decision order; this is not a claim that every possible race has been independently tested here." />
+
+<SourceLink path="backend/services/auctionCommands.js">lockAuction, dbClock and placeBid</SourceLink>
+show the order directly. The corresponding
+<SourceLink path="backend/tests/integration/bidding.test.js">integration test source</SourceLink>
+includes concurrent bids, waiting past the deadline, and retry conflicts.
+Those database tests were inspected, not rerun in this audit.
+
+<DecisionBlock title="Store the retry result with the business write"
+  approach="runIdempotent claims an actor/operation/key record in the caller's transaction and stores the response before commit. A changed payload conflicts."
+  tradeOff="The guarantee requires an idempotency key: calls without a key run normally. Retained key tombstones also need an explicit storage policy." />
+
+<SourceLink path="backend/services/idempotency.js">Idempotency source</SourceLink>.
+
+<DecisionBlock title="Commit events first; deliver them at least once"
+  approach="The transaction appends an outbox row. A dispatcher leases committed rows, fences stale attempts, retries failures with backoff and eventually dead-letters them."
+  tradeOff="A crash after a side effect but before marking delivery can repeat it. Consumers must deduplicate; email may still be resent after provider acceptance." />
+
+<SourceLink path="backend/services/outbox.js">Outbox implementation</SourceLink> and
+<SourceLink path="backend/tests/integration/outbox.test.js">rollback, retry and fencing test source</SourceLink>.
+
+<h2 id="implementation">Implementation boundaries</h2>
+
+The worker's settlement service claims due rows with `FOR UPDATE SKIP LOCKED`,
+re-reads under the lock and uses an order uniqueness constraint as a further guard.
+Auctions without eligible bids can end without an order. This describes safeguards,
+not a universal exactly-once delivery guarantee.
+<SourceLink path="backend/services/settlement.js">Settlement implementation</SourceLink>;
+<SourceLink path="backend/tests/integration/settlement.test.js">settlement test source</SourceLink>.
+
+Order legality is decided by a pure transition function, while a command service
+applies the result. Manual proof and mock-gateway orders use distinct payment paths.
+The reviewed feature matrix lists real-provider sandbox work as planned, not shipped.
+<SourceLink path="backend/domain/orderTransitions.js">Order rules</SourceLink>;
+<SourceLink path="docs/feature-matrix.md">feature status and open work</SourceLink>.
+
+<h2 id="verification">Verification: what was actually checked</h2>
+
+During this portfolio audit, the dependency-free bidding and order-transition
+suites were executed: **19 tests passed, 0 failed**. This independently checks pure
+rules, not PostgreSQL locks or deployed application behavior.
+
+An initial attempt to run every backend unit file could not complete because the
+isolated checkout had no installed database/validation packages. The scoped run
+above is deliberately reported separately. PostgreSQL integration tests, browser
+journeys, load tests and Lighthouse were not reproduced here.
+
+The repository's historical T23 report records a hot-lot p95 of **549 ms** with
+50 bidders. Its raw JSON records 1,557 requests, including 1,322 rule refusals;
+these are not 1,557 successful bids. This is a **repository-reported lab result**,
+not a measurement made during this audit. The report describes 20-second phases on
+one Ryzen 7 8845H / 14 GB Windows 11 machine, with Node 24.18.0, PostgreSQL 16.14 in
+Docker Desktop, the API, worker and load generator sharing that machine. Logging
+was enabled and there was no TLS/proxy. The raw artifact and report agree on the
+p95 value; that corroborates transcription, not reproduction or production capacity.
+
+<SourceLink path="docs/validation/report-t23.md">T23 report and caveats</SourceLink>;
+<SourceLink path="docs/validation/load-t23.json">raw measurement artifact</SourceLink>.
+
+<h2 id="outcomes">Outcomes supported by the audit</h2>
+
+The source exposes explicit transaction boundaries, retry behavior, background
+settlement and an order state machine. These mechanisms can be followed through
+implementation and test source instead of relying on the README alone. The pure
+rules also passed the scoped independent test run described above.
+
+The demo URL returned HTTP 200 during the link check on 2026-11-08. That check does
+not validate login, bidding, payment flows, uptime or correspondence between the
+hosted build and the audited commit. The case study stays published separately
+from the product's **in-progress** development status.
+
+<h2 id="limitations">Limitations and reflection</h2>
+
+The remaining verification gap is transactional behavior under real database and
+process faults in the current environment. Re-running those integration suites is
+more meaningful than extrapolating from pure tests or a single-machine load file.
+Multi-instance SSE and field Core Web Vitals remain unmeasured in the inspected report.
+
+Real payments, production capacity and AI Listing Copilot completion are not claimed.
+The report notes a Render cold-start risk and gaps around OAuth credentials,
+legacy proof storage and manual screen-reader testing. Existing seeded UI screenshots
+were inspected but not reproduced in this portfolio; no product screenshot rights
+or personal contribution scope were inferred from repository ownership.
+
+The useful engineering lesson is the trade-off: move correctness into inspectable
+transaction boundaries, then describe the remaining delivery and operational limits
+as carefully as the intended guarantees.

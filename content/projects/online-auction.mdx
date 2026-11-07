@@ -1,16 +1,25 @@
-import { DecisionBlock, EvidenceFigure, SourceLink } from '@/components/case-study/elements';
+import { DecisionBlock, EvidenceFigure } from '@/components/case-study/elements';
+import { AuctionSourceLink as SourceLink } from '@/content/online-auction-source-link';
 
-<h2 id="overview">Overview</h2>
+<h2 id="overview">Context</h2>
 
-Online-Auction is a React/Vite auction application backed by an Express API,
-PostgreSQL and a separate worker. This study examines the implementation on
-`feature/auction-upgrade` at commit `303ae3348c8456fc4b5f83fe850b2b14db80a688`.
-It is a source-audited engineering study, not a claim of sole personal authorship
-or a completed production service.
+For a buyer, a bid needs a clear answer: was it accepted, is it still leading,
+and what happens if the response never arrives? For a seller, an auction must
+close consistently even when bidders arrive together or nobody has the page open.
+Online-Auction puts those questions at the boundary between the interface and
+committed business state.
 
-The focus is the boundary between an interactive bid and durable business state:
-what happens when requests race, clients retry, or a process stops after a write.
+This source-audited study follows three decisions: order competing bids, make
+keyed retries replayable, and separate committed events from their delivery.
 <SourceLink path="docs/architecture.md">Architecture source</SourceLink>.
+
+<h2 id="scope">Scope and attribution</h2>
+
+The reviewed implementation is on `feature/auction-upgrade` at immutable commit
+`303ae3348c8456fc4b5f83fe850b2b14db80a688`. It uses React/Vite, Express,
+PostgreSQL/Drizzle and a separate worker. Individual contribution scope is not
+asserted; this is source analysis of an **in-progress** application, not a personal
+ownership claim or production-service certification.
 
 <h2 id="problem">Problem</h2>
 
@@ -50,6 +59,8 @@ measured multi-instance capacity.
 <h2 id="decisions">Key engineering decisions</h2>
 
 <DecisionBlock title="Serialize one auction, not every auction"
+  problem="Two bids can read the same price, and a deadline can pass while a request waits for another writer."
+  rationale="Checking the database clock after acquiring the row lock makes the deadline decision reflect the state the command can actually change."
   approach="A command locks the auction row, then evaluates clock_timestamp() and the proxy-bidding rules inside the same transaction."
   tradeOff="A hot lot is serialized, limiting its throughput. The benefit is a clear decision order; this is not a claim that every possible race has been independently tested here." />
 
@@ -60,14 +71,18 @@ includes concurrent bids, waiting past the deadline, and retry conflicts.
 Those database tests were inspected, not rerun in this audit.
 
 <DecisionBlock title="Store the retry result with the business write"
+  problem="A buyer loses the HTTP response and retries without knowing whether the first command committed."
+  rationale="Keeping the key claim, business write and saved response in one transaction avoids a separately committed retry record disagreeing with business state."
   approach="runIdempotent claims an actor/operation/key record in the caller's transaction and stores the response before commit. A changed payload conflicts."
   tradeOff="The guarantee requires an idempotency key: calls without a key run normally. Retained key tombstones also need an explicit storage policy." />
 
 <SourceLink path="backend/services/idempotency.js">Idempotency source</SourceLink>.
 
 <DecisionBlock title="Commit events first; deliver them at least once"
+  problem="A process can stop between committing an auction change and sending its notification."
+  rationale="Persisting the delivery intent with the business write lets a worker retry after commit without keeping an external service call inside the transaction."
   approach="The transaction appends an outbox row. A dispatcher leases committed rows, fences stale attempts, retries failures with backoff and eventually dead-letters them."
-  tradeOff="A crash after a side effect but before marking delivery can repeat it. Consumers must deduplicate; email may still be resent after provider acceptance." />
+  tradeOff="A crash after a side effect but before marking delivery can repeat it. Consumers must deduplicate and compare versions when ordering matters. Email may still be resent after provider acceptance." />
 
 <SourceLink path="backend/services/outbox.js">Outbox implementation</SourceLink> and
 <SourceLink path="backend/tests/integration/outbox.test.js">rollback, retry and fencing test source</SourceLink>.
@@ -89,14 +104,20 @@ The reviewed feature matrix lists real-provider sandbox work as planned, not shi
 
 <h2 id="verification">Verification: what was actually checked</h2>
 
-During this portfolio audit, the dependency-free bidding and order-transition
-suites were executed: **19 tests passed, 0 failed**. This independently checks pure
+In the earlier Sprint 04 source audit at the same pinned revision, the dependency-free bidding and order-transition
+suites were independently executed by the agent: **19 tests passed, 0 failed**. That scoped execution checked pure
 rules, not PostgreSQL locks or deployed application behavior.
 
 An initial attempt to run every backend unit file could not complete because the
 isolated checkout had no installed database/validation packages. The scoped run
-above is deliberately reported separately. PostgreSQL integration tests, browser
-journeys, load tests and Lighthouse were not reproduced here.
+above is deliberately reported separately. No Online-Auction tests were rerun for this editorial sprint. PostgreSQL integration tests, browser
+journeys, load tests and Lighthouse were not reproduced in either audit.
+
+<SourceLink path="backend/tests/unit/bidding.test.js">Executed bidding suite source</SourceLink>;
+<SourceLink path="backend/tests/unit/orderTransitions.test.js">executed order-transition suite source</SourceLink>.
+Portfolio checks validate this site; they do not prove auction transactional correctness.
+
+### Repository-reported measurement
 
 The repository's historical T23 report records a hot-lot p95 of **549 ms** with
 50 bidders. Its raw JSON records 1,557 requests, including 1,322 rule refusals;
@@ -117,7 +138,7 @@ settlement and an order state machine. These mechanisms can be followed through
 implementation and test source instead of relying on the README alone. The pure
 rules also passed the scoped independent test run described above.
 
-The demo URL returned HTTP 200 during the link check on 2026-11-08. That check does
+The earlier Sprint 04 link check recorded HTTP 200 from the demo on 2026-11-08; it was not rechecked in this editorial sprint. That check does
 not validate login, bidding, payment flows, uptime or correspondence between the
 hosted build and the audited commit. The case study stays published separately
 from the product's **in-progress** development status.

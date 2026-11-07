@@ -6,7 +6,7 @@ import { ExperienceList } from '@/components/about/experience-list';
 import { expertise, getVerifiedExpertise } from '@/content/expertise';
 import { profile, publishedText, experiences } from '@/content/profile';
 import { getContactLinks, site } from '@/content/site';
-export const metadata: Metadata = { title: 'About', description: 'Engineering focus across frontend interfaces, backend systems, and AI-assisted workflows. Explore the work and its supporting evidence.' };
+export const metadata: Metadata = { title: 'About', description: 'An engineering approach across interfaces, APIs and development workflows, with source-backed case studies and explicitly scoped evidence.' };
 export default function AboutPage() {
   const name = publishedText(profile.name);
   const bio = publishedText(profile.bio);
@@ -16,7 +16,7 @@ export default function AboutPage() {
       <Eyebrow className="hero-meta">About / Engineering focus</Eyebrow>
       <div className="hero-body">
         <DisplayHeading>Interfaces.<br />Systems.<br /><em className="accent">The connections between.</em></DisplayHeading>
-        <div className="prose">{name && <p>{name}</p>}<p>{bio ?? site.introduction}</p></div>
+        <div className="prose">{name && <p>{name}</p>}<p>{bio ?? 'The engineering focus spans frontend interfaces, backend systems, and the workflows that connect them. The work below makes technical choices inspectable through source, tests, and clearly stated limits.'}</p></div>
         <TextLink href="/work/" arrow="↗">Explore the work</TextLink>
       </div>
     </header>
@@ -25,13 +25,13 @@ export default function AboutPage() {
       <SectionHeading id="focus-heading">Three connected disciplines.</SectionHeading>
       <ul className="about-focus-grid">{getVerifiedExpertise(expertise).map(area => <li key={area.id}>
         <SectionHeading as="h3">{area.title}</SectionHeading><p>{area.summary}</p>
-        <p className="eyebrow">{area.technologies.join(' / ')}</p>
+
       </li>)}</ul>
     </section>
     <section className="content-section editorial-grid" aria-labelledby="approach-heading">
       <Eyebrow className="section-label">02 / Read the work</Eyebrow>
-      <div className="section-body"><SectionHeading id="approach-heading">Decisions, with context.</SectionHeading>
-        <div className="prose"><p>The case studies connect technical decisions to source evidence, verification, and limitations. Start with Online-Auction for a closer look at transaction boundaries, proxy bidding, and event delivery.</p></div>
+      <div className="section-body"><SectionHeading id="approach-heading">Follow a decision through the system.</SectionHeading>
+        <div className="prose"><p>Start with the user problem, follow the state change, then inspect what was checked. In Online-Auction, that means tracing a bid from the request to committed state and onward to event delivery. The study keeps implementation evidence, prior test execution, and operational unknowns separate.</p></div>
         <TextLink href="/work/online-auction/" arrow="↗">Read the Online-Auction case study</TextLink>
       </div>
     </section>

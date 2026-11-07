@@ -14,7 +14,7 @@ export type SiteProfile = {
 
 export const site: SiteProfile = {
   title: 'Portfolio — Full-stack Software Engineer',
-  description: 'Full-stack software engineering: frontend interfaces, backend APIs, and AI-assisted workflows. Explore engineering focus areas and selected work.',
+  description: 'Full-stack Software Engineer: React interfaces, Node.js APIs and PostgreSQL. Read source-backed engineering decisions, verification and limitations.',
   role: 'Full-stack Software Engineer',
   name: null,
   introduction: 'Frontend interfaces and the systems behind them. Work involving React, Node.js, and PostgreSQL, supported by AI-assisted workflows and automation.',
@@ -44,3 +44,6 @@ export function validResumePath(path: string): boolean {
 function validProfileUrl(value: string, host: string): boolean {
   try { const url = new URL(value); return url.protocol === 'https:' && url.hostname === host && !url.username && !url.password && !url.port; } catch { return false; }
 }
+
+// Editorial summary uses only approved focus areas and the published source audit.
+export const recruiterSummary = 'Full-stack Software Engineer focused on React interfaces, Node.js APIs, and PostgreSQL, supported by AI-assisted workflows and automation. Explore Online-Auction through a source-backed study of competing bids, retried requests, and background settlement. Follow the user problem into technical decisions, trade-offs, and pinned implementation evidence. The study separates inspected source, prior test execution, and reported results; individual contribution scope remains unasserted.';

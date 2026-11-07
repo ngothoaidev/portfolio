@@ -29,3 +29,17 @@ Only prior explicit publication approvals carried by the base repository are use
 5. Which product screenshots may be republished? Supply provenance/permission and confirm personal/customer data are removed.
 
 Until answers and approval arrive, the published project record and MDX remain unchanged. These are content launch limitations, not fabricated placeholders.
+
+
+## Sprint 06 contribution approval checklist — pending
+
+No new personal publication approval was supplied. Existing neutral source-analysis scope remains published; no My Role placeholder is shown. Future contribution scope must have a nonempty explicit approval reference and approved wording before rendering.
+
+- [ ] Identify exact personally changed modules, files and commit hashes at the audited revision.
+- [ ] State each personal task and distinguish implementation, review, source analysis and team work.
+- [ ] Separate individual decisions from team decisions, with evidence or explicit owner attestation.
+- [ ] List tests personally run, revision, environment, command and results; distinguish inspected tests and historical reports.
+- [ ] Approve the exact first-person contribution wording for publication; repository ownership alone is insufficient.
+- [ ] Supply provenance and publication/privacy permission before any real product capture is copied.
+
+Public name, biography, employer/history/dates, education, contact destinations, availability and redacted resume remain pending as above. Sprint 06 technical readiness does not grant public-launch or indexing permission.

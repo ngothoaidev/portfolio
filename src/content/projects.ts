@@ -1,3 +1,4 @@
+import type { Approved } from './profile';
 export type VerifiedProjectLink = {
   label: string;
   url: `https://${string}`;
@@ -10,6 +11,7 @@ export type Project = {
   title: string;
   summary: string;
   role: string;
+  contributionScope?: Approved<string>;
   technologies: readonly string[];
   publicationStatus: 'draft' | 'published';
   developmentStatus: 'in-progress' | 'completed' | 'archived';
@@ -29,7 +31,7 @@ export function getPublishedProjects(records: readonly Project[]): readonly Proj
 export const projects: readonly Project[] = [{
   slug: 'online-auction',
   title: 'Online-Auction',
-  summary: 'A source-audited study of proxy bidding, transaction boundaries, worker settlement, and at-least-once event delivery.',
+  summary: 'When bids compete and buyers retry: a source-backed study of auction ordering, transactional idempotency, and background settlement.',
   role: 'Source analysis; individual contribution scope is not asserted.',
   technologies: ['React', 'Express', 'PostgreSQL', 'Drizzle', 'SSE'],
   publicationStatus: 'published',

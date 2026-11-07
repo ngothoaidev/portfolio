@@ -1,6 +1,6 @@
 import { existsSync } from 'node:fs';
 import { resolve, sep } from 'node:path';
-import { caseStudyIndex } from './case-study-index';
+import { caseStudyIndex, registeredStudy } from './case-study-index';
 import type { Project } from './projects';
 
 export function validateProjects(records: readonly Project[], root = process.cwd()): void {
@@ -25,7 +25,7 @@ export function validateProjects(records: readonly Project[], root = process.cwd
       if (!project.cover.src.startsWith('/') || project.cover.src.startsWith('//') || !asset.startsWith(publicRoot + sep) || !existsSync(asset) || !project.cover.alt.trim() || project.cover.width <= 0 || project.cover.height <= 0) throw new Error('Invalid or missing cover asset');
     }
     if (project.caseStudy) {
-      const entry = Object.hasOwn(caseStudyIndex, project.slug) ? caseStudyIndex[project.slug] : undefined;
+      const entry = registeredStudy(project, caseStudyIndex);
       if (!entry || entry.contentPath !== project.caseStudy.contentPath || !existsSync(resolve(root, entry.contentPath))) throw new Error('Missing registered case study');
     }
   }

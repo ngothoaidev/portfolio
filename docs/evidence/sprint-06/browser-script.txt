@@ -1,0 +1,18 @@
+const { chromium } = require('C:/Users/thoai/AppData/Local/npm-cache/_npx/e41f203b7505f1fb/node_modules/playwright');
+const fs = require('node:fs');
+(async()=>{const browser=await chromium.launch({headless:true});const page=await browser.newPage();const results=[];const keyboard=[];
+for(const width of [320,390,768,834,1024,1440]) for(const [label,route] of [['about','/about/'],['home','/'],['work','/work/'],['detail','/work/online-auction/'],['404','/404.html']]) {
+ await page.setViewportSize({width,height:1000}); const response=await page.goto('http://127.0.0.1:3006'+route);await page.evaluate(()=>document.fonts.ready);
+ const facts=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth>innerWidth,h1:document.querySelectorAll('h1').length,about:!!document.querySelector('nav a[href="/about/"]'),figure: [...document.querySelectorAll('figure img')].every(img=>img.complete&&img.naturalWidth>0&&img.getBoundingClientRect().width<=innerWidth),robots:[...document.querySelectorAll('meta[name="robots"]')].map(el=>el.content)}));
+ if(response.status()!==200||facts.overflow||facts.h1!==1||(!facts.about&&label!=='404')||!facts.figure)throw Error(JSON.stringify({width,route,...facts}));
+ results.push({width,route,status:response.status(),...facts});await page.screenshot({path:`docs/evidence/sprint-06/${label}-${width}.jpg`,fullPage:true});
+ if(label==='detail')await page.locator('figure').screenshot({path:`docs/evidence/sprint-06/figure-${width}.jpg`});
+}
+for(const route of ['/','/about/','/work/','/work/online-auction/']) {
+ await page.goto('http://127.0.0.1:3006'+route);await page.keyboard.press('Tab');const focus=await page.evaluate(()=>({text:document.activeElement.textContent,outline:getComputedStyle(document.activeElement).outlineStyle}));await page.keyboard.press('Enter');await page.waitForTimeout(100);const skip=await page.evaluate(()=>document.activeElement.id);if(skip!=='main')throw Error('Skip failed');keyboard.push({route,focus,skip});
+}
+await page.goto('http://127.0.0.1:3006/');await page.getByRole('link',{name:'Read Online-Auction case study',exact:true}).first().click();await page.waitForURL('**/work/online-auction/');
+await page.getByRole('link',{name:'Engineering decisions',exact:true}).click();await page.waitForURL('**/#decisions');
+await page.locator('nav a[href="/#expertise"]').click();await page.waitForURL('**/#expertise');await page.locator('nav a[href="/about/"]').click();await page.waitForURL('**/about/');await page.getByRole('link',{name:'Explore the work',exact:true}).click();await page.waitForURL('**/work/');await page.getByRole('link',{name:'Read Online-Auction case study',exact:true}).click();await page.waitForURL('**/work/online-auction/');
+const missing=await page.goto('http://127.0.0.1:3006/work/not-a-project/');if(missing.status()!==404)throw Error('Missing slug must 404');
+fs.writeFileSync('docs/evidence/sprint-06/browser-results.json',JSON.stringify({results,keyboard,navigation:'Home flagship → decisions → Expertise → About → Work → detail passed',unknownSlug:missing.status()},null,2));await browser.close();})();

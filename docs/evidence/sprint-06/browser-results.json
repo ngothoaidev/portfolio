@@ -1,0 +1,406 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 320,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 390,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 768,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 834,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 834,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 834,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 834,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 834,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1024,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1024,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1024,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1024,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1024,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/about/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/work/online-auction/",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": true,
+      "figure": true,
+      "robots": [
+        "noindex, nofollow"
+      ]
+    },
+    {
+      "width": 1440,
+      "route": "/404.html",
+      "status": 200,
+      "overflow": false,
+      "h1": 1,
+      "about": false,
+      "figure": true,
+      "robots": [
+        "noindex",
+        "noindex, nofollow"
+      ]
+    }
+  ],
+  "keyboard": [
+    {
+      "route": "/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": "main"
+    },
+    {
+      "route": "/about/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": "main"
+    },
+    {
+      "route": "/work/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": "main"
+    },
+    {
+      "route": "/work/online-auction/",
+      "focus": {
+        "text": "Skip to content",
+        "outline": "solid"
+      },
+      "skip": "main"
+    }
+  ],
+  "navigation": "Home flagship → decisions → Expertise → About → Work → detail passed",
+  "unknownSlug": 404
+}
