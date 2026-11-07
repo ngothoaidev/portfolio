@@ -2,11 +2,16 @@ import assert from 'node:assert/strict';
 import { readFileSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 
-const paths = ['index.html', 'work/index.html', 'work/online-auction/index.html', '404.html'];
+const paths = ['index.html', 'work/index.html', 'work/online-auction/index.html', '404.html', 'about/index.html'];
 const fileFor = (pathname) => pathname.endsWith('.html') ? join('out', pathname) : join('out', pathname, 'index.html');
 for (const path of paths) {
   const html = readFileSync(join('out', path), 'utf8');
   assert.equal((html.match(/<h1\b/g) ?? []).length, 1, `${path}: one H1`);
+  if (path !== '404.html') assert.match(html, /href="\/about\/"/);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  assert.equal(new Set(ids).size, ids.length, `${path}: unique IDs`);
+  let level = 0;
+  for (const heading of html.matchAll(/<h([1-6])\b/g)) { const next = Number(heading[1]); assert.ok(next <= level + 1, `${path}: heading sequence`); level = next; }
   assert.match(html, /name="robots" content="noindex, nofollow"/);
   assert.doesNotMatch(html, /Synthetic fixture|Hidden draft|enterprise-grade/);
   for (const match of html.matchAll(/<a\b[^>]*href="([^"]+)"/g)) {
@@ -30,3 +35,8 @@ assert.match(detail, /repository-reported lab result/);
 assert.match(detail, /19 tests passed/);
 assert.ok(!existsSync('out/work/missing/index.html'));
 console.log('PASS work export: archive + registered MDX detail, H1, noindex, headings, evidence figure, all local links/anchors, no unknown slug export.');
+
+const about = readFileSync('out/about/index.html', 'utf8');
+assert.doesNotMatch(about, /mailto:|linkedin\.com|href="[^" ]*\.pdf|id="experience"|Hidden draft|Private employer/i);
+assert.match(about, /href="\/work\/"/);
+console.log('PASS about export: navigation, heading hierarchy, unique IDs and unpublished channels absent.');

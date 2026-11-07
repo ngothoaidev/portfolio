@@ -157,3 +157,17 @@ p { margin: 0; }
 
 .case-prose a { text-decoration: underline; }
 .case-toc a:hover, .case-toc a:focus-visible { text-decoration: underline; }
+/* About uses the shared editorial tokens and structural hairlines. */
+.about-opening { padding-block: var(--hero-start) var(--space-16); }
+.about-opening .display-heading { font-size: clamp(3rem, 6vw, 6rem); }
+.about-opening .text-link, .content-section .prose + .text-link { margin-top: var(--space-8); }
+.about-focus { border-top: var(--border-hairline); padding-block: var(--space-12); }
+.about-focus > .section-title { margin-top: var(--space-6); }
+.about-focus-grid { list-style: none; padding: 0; margin: var(--space-10) 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-8); }
+.about-focus-grid p { color: var(--muted); margin-top: var(--space-6); overflow-wrap: anywhere; }
+.about-experience { border-top: var(--border-hairline); padding-block: var(--space-12); }
+.experience-list { padding-left: var(--space-6); }
+.experience-list > li { padding-block: var(--space-6); }
+.experience-list p { max-width: 70ch; margin-top: var(--space-4); }
+.experience-period { color: var(--muted); }
+@media (max-width: 767px) { .about-focus-grid { grid-template-columns: minmax(0, 1fr); } }

@@ -8,6 +8,8 @@ export type SiteProfile = {
   githubUrl: `https://${string}` | null;
   linkedinUrl: `https://${string}` | null;
   resumePath: `/${string}` | null;
+  contactApprovals?: Partial<Record<'email' | 'githubUrl' | 'linkedinUrl' | 'resumePath', string>>;
+  resumePrivacyReviewed?: boolean;
 };
 
 export const site: SiteProfile = {
@@ -21,6 +23,7 @@ export const site: SiteProfile = {
   githubUrl: 'https://github.com/ngothoaidev',
   linkedinUrl: null,
   resumePath: null,
+  contactApprovals: { githubUrl: 'Owner publication approval, Sprint 03, 2026-11-08' },
 };
 
 export type ContactLink = { label: string; href: string };
@@ -28,9 +31,16 @@ export type ContactLink = { label: string; href: string };
 // Local data is reviewed before publication. Unknown destinations stay null.
 export function getContactLinks(profile: SiteProfile): readonly ContactLink[] {
   const links: ContactLink[] = [];
-  if (profile.email) links.push({ label: 'Email', href: `mailto:${profile.email}` });
-  if (profile.githubUrl) links.push({ label: 'GitHub', href: profile.githubUrl });
-  if (profile.linkedinUrl) links.push({ label: 'LinkedIn', href: profile.linkedinUrl });
-  if (profile.resumePath) links.push({ label: 'Resume (PDF)', href: profile.resumePath });
+  if (profile.email && profile.contactApprovals?.email?.trim() && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(profile.email)) links.push({ label: 'Email', href: `mailto:${profile.email}` });
+  if (profile.githubUrl && profile.contactApprovals?.githubUrl?.trim() && validProfileUrl(profile.githubUrl, 'github.com')) links.push({ label: 'GitHub', href: profile.githubUrl });
+  if (profile.linkedinUrl && profile.contactApprovals?.linkedinUrl?.trim() && validProfileUrl(profile.linkedinUrl, 'www.linkedin.com')) links.push({ label: 'LinkedIn', href: profile.linkedinUrl });
+  if (profile.resumePath && profile.contactApprovals?.resumePath?.trim() && profile.resumePrivacyReviewed && validResumePath(profile.resumePath)) links.push({ label: 'Resume (PDF)', href: profile.resumePath });
   return links;
+}
+
+export function validResumePath(path: string): boolean {
+  return /^\/(?:[a-zA-Z0-9_-]+\/)*[a-zA-Z0-9_-]+\.pdf$/.test(path);
+}
+function validProfileUrl(value: string, host: string): boolean {
+  try { const url = new URL(value); return url.protocol === 'https:' && url.hostname === host && !url.username && !url.password && !url.port; } catch { return false; }
 }

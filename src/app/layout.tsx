@@ -6,6 +6,8 @@ import '@fontsource/geist/latin-500.css';
 import '@fontsource/ibm-plex-mono/latin-400.css';
 import './globals.css';
 import { site } from '@/content/site';
+import { validateResume } from '@/content/validate-resume';
+validateResume(site);
 
 export const metadata: Metadata = {
   title: { default: site.title, template: '%s — Portfolio' },

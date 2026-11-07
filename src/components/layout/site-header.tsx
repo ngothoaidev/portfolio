@@ -9,6 +9,7 @@ export function SiteHeader() {
         Portfolio<span aria-hidden="true">.</span>
       </Link>
       <nav aria-label="Main navigation" className="site-nav">
+        <Link href="/about/">About</Link>
         <Link href="/work/">Work</Link>
         {getVerifiedExpertise(expertise).length > 0 && <Link href="/#expertise">Expertise</Link>}
         {getContactLinks(site).length > 0 && <Link href="/#contact">Contact</Link>}
