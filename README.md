@@ -1,13 +1,13 @@
 # Editorial portfolio
 
-Sprint 03 homepage experience for a Full-stack Software Engineer portfolio. Next.js App Router, TypeScript, Tailwind CSS, and local MDX. Uses Node.js **24.18.0**, pinned in `.nvmrc`, `.node-version`, and `package.json`. Switch to that version before installing.
+Sprint 04: homepage, work archive and source-backed engineering case studies. Next.js App Router, TypeScript, Tailwind v4, trusted local MDX, Server Components and static export. Node **24.18.0** is pinned in `.nvmrc`, `.node-version` and package engines.
 
 ```sh
 npm ci
 npm run dev
 ```
 
-Open http://localhost:3000. Production checks:
+Local development: http://localhost:3000. Checks:
 
 ```sh
 npm run lint
@@ -15,59 +15,30 @@ npm run typecheck
 npm test
 npm run build
 npm run verify:export
+npm audit --omit=dev --audit-level=moderate
 ```
 
-`npm run build` exports static files to `out/`. Fonts are bundled locally; no runtime Google Fonts request is required.
+`out/` contains static HTML/assets for `/`, `/work/`, `/work/online-auction/` and 404. No server, database, CMS, runtime content fetch or custom client component is required. Fonts are local. Root noindex remains enabled; no canonical deployment domain is fabricated.
 
-## Content
+## Content and routing
 
-- `src/content/site.ts`: site identity and metadata; unknown details remain null.
-- `src/content/projects.ts`: typed project records, empty pending verified material.
-- `src/content/introduction.mdx`: build-compiled homepage introduction.
-- `content/templates/project.mdx`: authoring prompts, excluded from routes.
-- `docs/sprint-01.md`: initial scope, audit, dependencies, and owner inputs.
-- `docs/sprint-01-hardening.md`: architecture, content contracts, audit decision, verification, and remaining work.
+- `src/content/site.ts`, `expertise.ts`, `introduction.mdx`: owner-confirmed homepage material and approved GitHub contact; unknown identity/contact fields remain absent.
+- `src/content/projects.ts`: typed records with separate publication/development state. Online-Auction is published as an impersonal source-audited study of an in-progress implementation, without attributing all code to the portfolio owner.
+- `src/content/case-study-index.ts`: finite content-path allowlist and selectors. Cards only link to published registered studies.
+- `src/content/project-case-studies.ts`: explicit static MDX imports; no arbitrary import paths or untrusted MDX execution.
+- `src/content/project-catalog.ts`, `validate-projects.ts`: build-time validation of duplicate slugs, required metadata, evidence dates/URLs, registered content and actual cover assets. Home/archive/detail all consume this validated catalog.
+- `content/projects/online-auction.mdx`: substantive case study. `content/templates/project.mdx` remains an un-routed authoring template.
 
-Keep draft content out of public routes. MDX is executable trusted repository content; never compile untrusted user submissions. Add case study routing in a separately approved sprint.
+To add a case study, audit evidence first; add its trusted MDX import and matching path allowlist; then publish the project record. Drafts remain absent. `generateStaticParams` emits only published registered slugs and `dynamicParams=false` rejects unknown slugs. A static host must serve its normal 404 for absent files and may use exported `404.html`; do not configure an SPA catch-all fallback for unknown case studies.
 
-The unfinished site uses noindex metadata. Before launch, verify all claims, fill identity/contact information, add a production canonical URL and sitemap, and explicitly enable indexing. No domain, email address, employment, or project metrics are fabricated.
+## Design and evidence
 
-## Architecture
+`src/app/tokens.css` owns primitive/semantic colors, spacing, type and layout tokens. `globals.css` applies recipes. Shared typography, Container, Section, TextLink and TechTag remain small server-rendered components. Case-study Header, TOC, EvidenceFigure and DecisionBlock support the current content; no heavy syntax or animation library was introduced.
 
-Server Components render at build time with `output: 'export'`. There are no APIs, databases, remote content requests, or client components. Shared visual tokens live in `src/app/globals.css`; MDX component mapping lives in `src/mdx-components.tsx`.
+Global navigation uses `/work/`, `/#expertise` and `/#contact` so nested routes work. Archive cards use H2; homepage cards use H3 under their section heading. The case study uses one H1 and ordered H2/H3 headings.
 
-Implementation references: [Next.js MDX](https://nextjs.org/docs/app/guides/mdx), [static exports](https://nextjs.org/docs/app/guides/static-exports), and [Tailwind setup](https://tailwindcss.com/docs/installation/framework-guides/nextjs).
+- [Sprint 04 implementation and verification](docs/sprint-04-work-case-studies.md)
+- [Online-Auction claim-to-evidence matrix](docs/content-audit-online-auction.md)
+- [Sprint 03](docs/sprint-03-homepage.md), [Sprint 02](docs/sprint-02-design-system.md), [Sprint 01](docs/sprint-01-hardening.md)
 
-
-## Sprint 01 hardening
-
-The homepage composes `SiteShell`, `Hero`, `SelectedWork`, and `About`. Layout components own navigation and the main landmark; sections own their headings. `ProjectCard` renders published records supplied by `SelectedWork`. All remain Server Components.
-
-CSS separates primitive palette values from semantic surface, text, border, focus, and selection aliases. Tailwind colors reference the semantic aliases. The editorial grid uses four columns below 768px, eight from 768–1023px, and twelve from 1024px.
-
-GitHub Actions uses the pinned Node version and `npm ci`, then runs lint, typecheck, component regression tests, build, and production dependency audit. Development audit findings are reported separately with a documented acceptance decision. CI has not yet been executed on GitHub for these local changes.
-
-
-## Sprint 02 design system
-
-See [the design audit](docs/sprint-02-design-audit.md) and [implementation/verification report](docs/sprint-02-design-system.md).
-
-`src/app/tokens.css` owns the palette, semantic color roles, space/type scales, layout rhythm and focus/border treatments. `globals.css` applies CSS recipes without global heading styling. Use the small primitives in `src/components/ui` and `src/components/layout`; keep body text in semantic HTML/MDX rather than wrapping every paragraph.
-
-`DisplayHeading` owns the H1. `SectionHeading` defaults to H2, with H3 for project titles. `Eyebrow` supports paragraph or inline metadata. `Container` is shared by home and 404, and `Section` shares the work/about editorial grid. `TextLink` preserves native anchor behavior and an optional decorative arrow; `TechTag` is noninteractive metadata. No Button, standalone Divider, dark mode, feedback system, or client-side design-system runtime is needed by the current pages.
-
-Baseline and final browser evidence is checked in under `docs/evidence/sprint-02/`. These images document human visual review and are not automated pixel baselines. Actual project content is still empty.
-
-
-## Sprint 03 homepage experience
-
-See [the Sprint 03 report](docs/sprint-03-homepage.md) for evidence, decisions and remaining owner inputs.
-
-The homepage now composes Hero, SelectedWork, EngineeringExpertise and Contact. The three expertise domains and public GitHub link were explicitly confirmed by the owner. Missing identity, employment, case studies, email, LinkedIn and resume remain omitted. The generic About scaffold was removed. Local MDX supplies the expertise introduction.
-
-- `src/content/site.ts` owns hero/site metadata and approved contact destinations; unknown destinations stay null. `getContactLinks` drives both contact rendering and navigation visibility.
-- `src/content/expertise.ts` holds the three typed owner-confirmed areas. A null `verifiedOn` excludes an area; no verified areas means no section.
-- `getPublishedProjects` remains the single selection source. The first published featured project can be prominent; the actual collection is still empty.
-- `npm run verify:export` checks the generated homepage after build for headings, labels, anchor targets, consented contact, noindex and excluded unsupported content. CI runs it after the production build.
-
-Do not infer employment, project completion or public contact consent from account metadata. Review content and verification dates before changing publication fields. No `/work/[slug]`, notes, backend, CMS or contact form exists.
+Screenshots under `docs/evidence/` record actual browser review; they are not pixel-test baselines. The authored SVG in `public/work/` is a source-derived architecture figure, not an invented product screenshot.

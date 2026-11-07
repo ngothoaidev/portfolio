@@ -26,4 +26,18 @@ export function getPublishedProjects(records: readonly Project[]): readonly Proj
 }
 
 // Only owner-verified records belong here. Test fixtures are never imported by the site.
-export const projects: readonly Project[] = [];
+export const projects: readonly Project[] = [{
+  slug: 'online-auction',
+  title: 'Online-Auction',
+  summary: 'A source-audited study of proxy bidding, transaction boundaries, worker settlement, and at-least-once event delivery.',
+  role: 'Source analysis; individual contribution scope is not asserted.',
+  technologies: ['React', 'Express', 'PostgreSQL', 'Drizzle', 'SSE'],
+  publicationStatus: 'published',
+  developmentStatus: 'in-progress',
+  featured: true,
+  links: [
+    { label: 'Audited source', url: 'https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688', kind: 'source', verifiedOn: '2026-11-08' },
+    { label: 'Demo (may cold-start)', url: 'https://online-auction-1-a3t4.onrender.com/', kind: 'demo', verifiedOn: '2026-11-08' },
+  ],
+  caseStudy: { contentPath: 'content/projects/online-auction.mdx' },
+}];

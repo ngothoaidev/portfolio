@@ -1,0 +1,140 @@
+import { DecisionBlock, EvidenceFigure, SourceLink } from '@/components/case-study/elements';
+
+<h2 id="overview">Overview</h2>
+
+Online-Auction is a React/Vite auction application backed by an Express API,
+PostgreSQL and a separate worker. This study examines the implementation on
+`feature/auction-upgrade` at commit `303ae3348c8456fc4b5f83fe850b2b14db80a688`.
+It is a source-audited engineering study, not a claim of sole personal authorship
+or a completed production service.
+
+The focus is the boundary between an interactive bid and durable business state:
+what happens when requests race, clients retry, or a process stops after a write.
+<SourceLink path="docs/architecture.md">Architecture source</SourceLink>.
+
+<h2 id="problem">Problem</h2>
+
+A bid is not just a new number on a page. Two requests can read the same price,
+a deadline can pass while a request waits, and a buyer can retry after losing the
+response. Auctions also need to close when nobody is viewing them. The implementation
+puts these decisions behind shared transaction boundaries rather than relying on
+browser timing or read-triggered settlement.
+
+<h2 id="constraints">Constraints</h2>
+
+- A bidder's private maximum must stay separate from public price history.
+- Deadline decisions must use a consistent clock after contention is resolved.
+- Retried keyed commands must not repeat their business effect.
+- Notifications must follow committed state; consumers must tolerate redelivery.
+- Payments are manual proof or a mock gateway. No real money processing is established.
+
+These are implemented policies and boundaries, not claims of unlimited reliability.
+<SourceLink path="docs/adr/0002-architecture-decisions.md">Technical decisions and alternatives</SourceLink>.
+
+<h2 id="architecture">Architecture</h2>
+
+The SPA sends HTTP commands and listens to Server-Sent Events. Express executes
+commands against PostgreSQL through Drizzle. The worker separately handles timed
+settlement and event dispatch. State and outbox events share the database; external
+effects are outside the business transaction.
+
+<EvidenceFigure src="/work/online-auction-architecture.svg" width={256} height={560}
+  alt="React SPA sends HTTP commands to Express; Express and a separate worker share PostgreSQL; committed events feed SSE and notifications."
+  caption="Source-derived architecture diagram, authored for this study. It is not a product screenshot. Based on architecture.md, auctionCommands.js, worker.js and realtime.js at the audited revision." />
+
+SSE reads committed public event payloads by auction version. A cursor supports
+replay; gaps can reset the client to a fresh snapshot. The source does not establish
+measured multi-instance capacity.
+<SourceLink path="backend/services/realtime.js">SSE implementation</SourceLink>.
+
+<h2 id="decisions">Key engineering decisions</h2>
+
+<DecisionBlock title="Serialize one auction, not every auction"
+  approach="A command locks the auction row, then evaluates clock_timestamp() and the proxy-bidding rules inside the same transaction."
+  tradeOff="A hot lot is serialized, limiting its throughput. The benefit is a clear decision order; this is not a claim that every possible race has been independently tested here." />
+
+<SourceLink path="backend/services/auctionCommands.js">lockAuction, dbClock and placeBid</SourceLink>
+show the order directly. The corresponding
+<SourceLink path="backend/tests/integration/bidding.test.js">integration test source</SourceLink>
+includes concurrent bids, waiting past the deadline, and retry conflicts.
+Those database tests were inspected, not rerun in this audit.
+
+<DecisionBlock title="Store the retry result with the business write"
+  approach="runIdempotent claims an actor/operation/key record in the caller's transaction and stores the response before commit. A changed payload conflicts."
+  tradeOff="The guarantee requires an idempotency key: calls without a key run normally. Retained key tombstones also need an explicit storage policy." />
+
+<SourceLink path="backend/services/idempotency.js">Idempotency source</SourceLink>.
+
+<DecisionBlock title="Commit events first; deliver them at least once"
+  approach="The transaction appends an outbox row. A dispatcher leases committed rows, fences stale attempts, retries failures with backoff and eventually dead-letters them."
+  tradeOff="A crash after a side effect but before marking delivery can repeat it. Consumers must deduplicate; email may still be resent after provider acceptance." />
+
+<SourceLink path="backend/services/outbox.js">Outbox implementation</SourceLink> and
+<SourceLink path="backend/tests/integration/outbox.test.js">rollback, retry and fencing test source</SourceLink>.
+
+<h2 id="implementation">Implementation boundaries</h2>
+
+The worker's settlement service claims due rows with `FOR UPDATE SKIP LOCKED`,
+re-reads under the lock and uses an order uniqueness constraint as a further guard.
+Auctions without eligible bids can end without an order. This describes safeguards,
+not a universal exactly-once delivery guarantee.
+<SourceLink path="backend/services/settlement.js">Settlement implementation</SourceLink>;
+<SourceLink path="backend/tests/integration/settlement.test.js">settlement test source</SourceLink>.
+
+Order legality is decided by a pure transition function, while a command service
+applies the result. Manual proof and mock-gateway orders use distinct payment paths.
+The reviewed feature matrix lists real-provider sandbox work as planned, not shipped.
+<SourceLink path="backend/domain/orderTransitions.js">Order rules</SourceLink>;
+<SourceLink path="docs/feature-matrix.md">feature status and open work</SourceLink>.
+
+<h2 id="verification">Verification: what was actually checked</h2>
+
+During this portfolio audit, the dependency-free bidding and order-transition
+suites were executed: **19 tests passed, 0 failed**. This independently checks pure
+rules, not PostgreSQL locks or deployed application behavior.
+
+An initial attempt to run every backend unit file could not complete because the
+isolated checkout had no installed database/validation packages. The scoped run
+above is deliberately reported separately. PostgreSQL integration tests, browser
+journeys, load tests and Lighthouse were not reproduced here.
+
+The repository's historical T23 report records a hot-lot p95 of **549 ms** with
+50 bidders. Its raw JSON records 1,557 requests, including 1,322 rule refusals;
+these are not 1,557 successful bids. This is a **repository-reported lab result**,
+not a measurement made during this audit. The report describes 20-second phases on
+one Ryzen 7 8845H / 14 GB Windows 11 machine, with Node 24.18.0, PostgreSQL 16.14 in
+Docker Desktop, the API, worker and load generator sharing that machine. Logging
+was enabled and there was no TLS/proxy. The raw artifact and report agree on the
+p95 value; that corroborates transcription, not reproduction or production capacity.
+
+<SourceLink path="docs/validation/report-t23.md">T23 report and caveats</SourceLink>;
+<SourceLink path="docs/validation/load-t23.json">raw measurement artifact</SourceLink>.
+
+<h2 id="outcomes">Outcomes supported by the audit</h2>
+
+The source exposes explicit transaction boundaries, retry behavior, background
+settlement and an order state machine. These mechanisms can be followed through
+implementation and test source instead of relying on the README alone. The pure
+rules also passed the scoped independent test run described above.
+
+The demo URL returned HTTP 200 during the link check on 2026-11-08. That check does
+not validate login, bidding, payment flows, uptime or correspondence between the
+hosted build and the audited commit. The case study stays published separately
+from the product's **in-progress** development status.
+
+<h2 id="limitations">Limitations and reflection</h2>
+
+The remaining verification gap is transactional behavior under real database and
+process faults in the current environment. Re-running those integration suites is
+more meaningful than extrapolating from pure tests or a single-machine load file.
+Multi-instance SSE and field Core Web Vitals remain unmeasured in the inspected report.
+
+Real payments, production capacity and AI Listing Copilot completion are not claimed.
+The report notes a Render cold-start risk and gaps around OAuth credentials,
+legacy proof storage and manual screen-reader testing. Existing seeded UI screenshots
+were inspected but not reproduced in this portfolio; no product screenshot rights
+or personal contribution scope were inferred from repository ownership.
+
+The useful engineering lesson is the trade-off: move correctness into inspectable
+transaction boundaries, then describe the remaining delivery and operational limits
+as carefully as the intended guarantees.

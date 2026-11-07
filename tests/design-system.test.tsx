@@ -28,8 +28,8 @@ test('hero and work compose one H1 and a labelled H2 section', () => {
 test('navigation links home and retains current section anchors', () => {
   const html = renderToStaticMarkup(<SiteHeader />);
   assert.match(html, /href="\/"/);
-  assert.match(html, /href="#work"/);
-  assert.match(html, /href="#expertise"/);
+  assert.match(html, /href="\/work\/?"/);
+  assert.match(html, /href="\/#expertise"/);
   assert.match(html, /aria-label="Main navigation"/);
 });
 

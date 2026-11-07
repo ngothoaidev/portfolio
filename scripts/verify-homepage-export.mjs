@@ -16,5 +16,5 @@ assert.equal((html.match(/<h2\b/g) ?? []).length, 3, 'One H2 per visible main se
 assert.match(html, /href="https:\/\/github.com\/ngothoaidev"/);
 assert.match(html, /name="robots" content="noindex, nofollow"/);
 assert.doesNotMatch(html, /mailto:|linkedin.com|href="[^"]*\.pdf|Synthetic fixture|Hidden draft|open to work/i);
-assert.doesNotMatch(html, /href="\/(work|notes)(\/|")/);
+assert.doesNotMatch(html, /href="\/notes(\/|")/);
 console.log('PASS exported homepage: headings, anchor targets, section labels, approved contact, omitted claims, noindex.');

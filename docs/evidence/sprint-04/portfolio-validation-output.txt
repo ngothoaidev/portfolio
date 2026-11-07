@@ -1,0 +1,66 @@
+> editorial-portfolio@0.1.0 test
+> tsx --test tests/*.test.tsx
+
+✔ hero and work compose one H1 and a labelled H2 section (14.0186ms)
+✔ navigation links home and retains current section anchors (3.8733ms)
+✔ not-found container can preserve the keyboard-focusable main landmark (0.8056ms)
+✔ text link preserves native link behavior and hides its decorative arrow (0.6447ms)
+✔ cards communicate each development status with text, named links and static technology tags (4.4619ms)
+✔ text and focus palette meet contrast thresholds against paper and selection (20.2176ms)
+✔ contact omits the whole section when no approved destination exists (9.5743ms)
+✔ only approved GitHub is published without fabricated email, resume or availability (8.202ms)
+✔ unverified expertise produces neither claims nor empty section dividers (0.7957ms)
+✔ expertise contains exactly the three owner-confirmed domains in a semantic list (4.1205ms)
+✔ only one published featured card is prominent and drafts cannot take that place (4.1678ms)
+✔ empty and draft-only content renders the empty state without leaking drafts (16.4234ms)
+✔ published content renders cards, development status and verified links (3.357ms)
+✔ featured ordering is stable and never promotes a draft (1.2524ms)
+✔ covers keep alt text and dimensions; an MDX reference does not create a dead link (7.3435ms)
+✔ only published registered content produces static slugs or links (2.4595ms)
+✔ archive renders one H1 and no draft content; empty state is intentional (16.0979ms)
+✔ publishing validates metadata, dates, URLs, registration and actual assets (4.3861ms)
+✔ figures expose alt text, intrinsic dimensions and a caption; decisions use a heading (7.2692ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 642.96
+
+> editorial-portfolio@0.1.0 build
+> next build
+
+▲ Next.js 16.4.5 (Turbopack)
+✓ Running next.config.mjs took 45ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1318ms
+  Running TypeScript ...
+  Finished TypeScript in 2.6s ...
+  Collecting page data using 6 workers ...
+  Generating static pages using 6 workers (0/5) ...
+  Generating static pages using 6 workers (1/5)
+  Generating static pages using 6 workers (2/5)
+  Generating static pages using 6 workers (3/5)
+✓ Generating static pages using 6 workers (5/5) in 1048ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /work
+└   /work/[slug]
+  └ ● /work/online-auction
+
+
+○  (Static)  prerendered as static content
+●  (SSG)     prerendered as static HTML (uses generateStaticParams)
+
+
+> editorial-portfolio@0.1.0 verify:export
+> node scripts/verify-homepage-export.mjs && node scripts/verify-work-export.mjs
+
+PASS exported homepage: headings, anchor targets, section labels, approved contact, omitted claims, noindex.
+PASS work export: archive + registered MDX detail, H1, noindex, headings, evidence figure, all local links/anchors, no unknown slug export.

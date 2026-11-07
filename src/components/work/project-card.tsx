@@ -1,3 +1,4 @@
+import { getCaseStudyHref } from '../../content/case-study-index';
 import Image from 'next/image';
 import type { Project } from '../../content/projects';
 import { Eyebrow, SectionHeading } from '../ui/typography';
@@ -6,7 +7,8 @@ import { TechTag } from '../ui/tech-tag';
 
 const statusLabels = { 'in-progress': 'In progress', completed: 'Completed', archived: 'Archived' };
 
-export function ProjectCard({ project, prominent = false }: { project: Project; prominent?: boolean }) {
+export function ProjectCard({ project, prominent = false, headingLevel = 'h3' }: { project: Project; prominent?: boolean; headingLevel?: 'h2' | 'h3' }) {
+  const caseStudyHref = getCaseStudyHref(project);
   return (
     <article className={`project-card${prominent ? ' project-card-featured' : ''}`} aria-labelledby={`project-${project.slug}`}>
       {project.cover && (
@@ -17,9 +19,10 @@ export function ProjectCard({ project, prominent = false }: { project: Project; 
         {project.featured && <span>Featured</span>}
         <span>{statusLabels[project.developmentStatus]}</span>
       </Eyebrow>
-      <SectionHeading as="h3" id={`project-${project.slug}`}>{project.title}</SectionHeading>
+      <SectionHeading as={headingLevel} id={`project-${project.slug}`}>{project.title}</SectionHeading>
       <p>{project.summary}</p>
-      <p>Role: {project.role}</p>
+      {caseStudyHref && <TextLink href={caseStudyHref}>Read {project.title} case study</TextLink>}
+      <p>Scope: {project.role}</p>
       <ul className="technology-list" aria-label="Technologies">
         {project.technologies.map((technology) => <li key={technology}><TechTag>{technology}</TechTag></li>)}
       </ul>

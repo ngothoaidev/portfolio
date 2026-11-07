@@ -1,0 +1,30 @@
+Warning: truncated output (original token count: 4795)
+Total output lines: 269
+
+✔ design D4.1 worked example (6.0972ms)
+✔ public events never carry a private ceiling and are attributed to the price holder (0.7724ms)
+✔ minimums: first bid >= starting price; challenger >= current + step; leader must RAISE (1.6968ms)
+✔ equal ceilings: the earlier one keeps the lead, price equals the ceiling; leader raise gets a new priority (0.4481ms)
+✔ price never decreases in normal bidding and never exceeds the leader's ceiling (0.8999ms)
+✔ price is capped by the leader's ceiling even when the challenger is one step below it (0.2813ms)
+✔ inconsistent legacy state (price above the leader's ceiling) aborts instead of guessing (0.3137ms)
+✔ recompute after removing the leader may lower the price; no eligible bidder -> starting price, no leader (0.5005ms)
+✔ anti-sniping extends the original deadline once, only for public events inside the last 5 minutes (1.3695ms)
+✔ property: 500 random sequences keep the proxy-bidding invariants (577.4953ms)
+✔ eligibility (B05) and Buy Now availability (B06) (0.9268ms)
+✔ viewerPosition.minimumBid is exactly the floor decideBid enforces, for every bidder in random states (2262.7221ms)
+✔ transition matrix: every command is legal exactly from its source states, for its actors, to its target (12.3804ms)
+✔ terminal states accept nothing (fulfilment, cancel, payment) (2.9329ms)
+✔ cancel (B09): seller only while unpaid, admin until shipping, reason mandatory (1.4166ms)
+✔ payment deadline (B08): proof and adapter payments are refused after dueAt; expiry only after dueAt (0.7702ms)
+✔ payload validation: proof needs address+phone, shipping needs tracking or proof (1.7026ms)
+✔ auction mapping (B07): sold when payment is recorded, untouched on proof submission and expiry (0.4364ms)
+✔ mock/sandbox orders cannot be paid by manual proof (no mixing of payment modes) (0.3365ms)
+ℹ tests 19
+ℹ suites 0
+ℹ pass 19
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 3095.2758

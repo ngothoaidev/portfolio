@@ -1,3 +1,4 @@
+import { TextLink } from '../ui/text-link';
 import { getPublishedProjects, type Project } from '../../content/projects';
 import { ProjectCard } from '../work/project-card';
 import { Section } from '../layout/section';
@@ -10,6 +11,7 @@ export function SelectedWork({ projects }: { projects: readonly Project[] }) {
       <div className="section-heading">
         <SectionHeading id="work-heading">Work, in detail.</SectionHeading>
         <Eyebrow as="span">{String(published.length).padStart(2, '0')} published</Eyebrow>
+        <TextLink href="/work/">All work</TextLink>
       </div>
       {published.length > 0 ? (
         <ul className="project-list">

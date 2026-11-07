@@ -1,0 +1,57 @@
+[
+  {
+    "client": 305,
+    "figureClient": 255,
+    "figureScroll": 255,
+    "h1": 1,
+    "headingFont": "\"Instrument Serif\", Georgia, serif",
+    "imageLoaded": true,
+    "main": 1,
+    "scroll": 305,
+    "width": 320
+  },
+  {
+    "client": 375,
+    "figureClient": 325,
+    "figureScroll": 325,
+    "h1": 1,
+    "headingFont": "\"Instrument Serif\", Georgia, serif",
+    "imageLoaded": true,
+    "main": 1,
+    "scroll": 375,
+    "width": 390
+  },
+  {
+    "client": 753,
+    "figureClient": 674,
+    "figureScroll": 674,
+    "h1": 1,
+    "headingFont": "\"Instrument Serif\", Georgia, serif",
+    "imageLoaded": true,
+    "main": 1,
+    "scroll": 753,
+    "width": 768
+  },
+  {
+    "client": 1009,
+    "figureClient": 642,
+    "figureScroll": 642,
+    "h1": 1,
+    "headingFont": "\"Instrument Serif\", Georgia, serif",
+    "imageLoaded": true,
+    "main": 1,
+    "scroll": 1009,
+    "width": 1024
+  },
+  {
+    "client": 1425,
+    "figureClient": 703,
+    "figureScroll": 703,
+    "h1": 1,
+    "headingFont": "\"Instrument Serif\", Georgia, serif",
+    "imageLoaded": true,
+    "main": 1,
+    "scroll": 1425,
+    "width": 1440
+  }
+]

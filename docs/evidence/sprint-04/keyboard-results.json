@@ -1,0 +1,50 @@
+{
+  "skipTarget": "main",
+  "traversal": [
+    {
+      "href": "#main",
+      "outline": "solid",
+      "text": "Skip to content"
+    },
+    {
+      "href": "/",
+      "outline": "solid",
+      "text": "Portfolio."
+    },
+    {
+      "href": "/work/",
+      "outline": "solid",
+      "text": "Work"
+    },
+    {
+      "href": "/#expertise",
+      "outline": "solid",
+      "text": "Expertise"
+    },
+    {
+      "href": "/#contact",
+      "outline": "solid",
+      "text": "Contact"
+    },
+    {
+      "href": "/work/",
+      "outline": "solid",
+      "text": "Back to work"
+    },
+    {
+      "href": "https://github.com/ngothoaidev/Online-Auction/tree/303ae3348c8456fc4b5f83fe850b2b14db80a688",
+      "outline": "solid",
+      "text": "Audited source"
+    },
+    {
+      "href": "https://online-auction-1-a3t4.onrender.com/",
+      "outline": "solid",
+      "text": "Demo (may cold-start)"
+    },
+    {
+      "href": "#overview",
+      "outline": "solid",
+      "text": "Overview"
+    }
+  ]
+}
